@@ -369,10 +369,11 @@
         </video>
 
         <div class="landing-content">
-            <div style="position:relative; height:auto; align-items: end; padding:20px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0);">
+            <div style="position:relative; height:auto; align-items: end; padding:20px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+">
                  <div class="unmute-button-container">
                        <button id="unmute-button" class="unmute-button">
-                          <img id="unmute-icon" src="https://www.iconsdb.com/icons/preview/white/volume-up-4-xxl.png" alt="Unmute">
+                          <img id="unmute-icon" src="https://img.icons8.com/ios/50/FFFFFF/medium-volume--v1.png" alt="Unmute">
                        </button>
                   </div>
                 <p style="line-height:1.2em">Female and non-binary DJ collective on a mission to dismantle the industry’s
@@ -509,11 +510,11 @@
         unmuteButton.addEventListener('click', () => {
             if (isMuted) {
                 video.muted = false;
-                unmuteIcon.src = "https://www.iconsdb.com/icons/preview/white/mute-2-xxl.png";
+                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/medium-volume--v1.png";
                 unmuteIcon.alt = "Mute";
             } else {
                 video.muted = true;
-                unmuteIcon.src = "https://www.iconsdb.com/icons/preview/white/volume-up-4-xxl.png";
+                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/mute--v1.png";
                 unmuteIcon.alt = "Unmute";
             }
             isMuted = !isMuted;
