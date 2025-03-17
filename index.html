@@ -43,7 +43,7 @@
         header nav a {
             color: #fff;
             margin-left: 1.5rem;
-            font-size:1.6em;
+            font-size: 1.6em;
             text-decoration: none;
             transition: 0.3s;
         }
@@ -63,7 +63,7 @@
             text-align: center;
             color: #fff;
             overflow: hidden;
-            width:100%;
+            width: 100%;
             /*  Prevent video overflow */
         }
 
@@ -82,13 +82,13 @@
 
         .landing-content {
             /*  Added a container for text content to position it */
-            width:100%;
-              padding-bottom: 0px;
+            width: 100%;
+            padding-bottom: 0px;
             /* Add some padding */
             z-index: 1;
             /*  Ensure the text content is above the video */
-            
-            
+
+
         }
 
         .landing h1 {
@@ -99,7 +99,7 @@
         .landing p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            
+
         }
 
         .btn {
@@ -217,12 +217,12 @@
             transition: height 0.5s ease;
             /*  Animate max-height */
             z-index: -1;
-        } 
+        }
 
-        .dropdown-menu a { 
+        .dropdown-menu a {
             display: block;
             padding: 1.5rem;
-            font-size:2em;
+            font-size: 2em;
             color: #fff;
             text-decoration: none;
             transition: 0.3s;
@@ -241,8 +241,10 @@
         /* Media Query for Mobile */
         @media (max-width: 768px) {
             header {
-                padding: 1rem; /* Reduce padding on smaller screens */
+                padding: 1rem;
+                /* Reduce padding on smaller screens */
             }
+
             .landing h1 {
                 font-size: 2rem;
             }
@@ -257,42 +259,75 @@
 
             .menu-toggle {
                 display: block;
-                order: 1;  /* Push to the left */
+                order: 1;
+                /* Push to the left */
             }
 
             .lgomob {
-                order: 2; /* Keep the logo in the center  */
-                margin: 0 auto; /* Center horizontally */
+                order: 2;
+                /* Keep the logo in the center  */
+                margin: 0 auto;
+                /* Center horizontally */
             }
 
             header {
-                justify-content: space-between; /* Ensure correct spacing */
-                align-items: center; /* Vertically align items */
+                justify-content: space-between;
+                /* Ensure correct spacing */
+                align-items: center;
+                /* Vertically align items */
             }
 
-             /* Style the instagram logo */
+            /* Style the instagram logo */
             .instagram-logo {
-                order: 4;  /* Push to the right */
+                order: 4;
+                /* Push to the right */
                 font-size: 2em;
                 color: white;
             }
+
             .landing video {
-            top:0;
-            height:90vh !important;
-             transform: translate(-50%, 0%);
-             }
-              .landing {
-            
-            height:90vh !important;
-            
-             }
-             
+                top: 0;
+                height: 90vh !important;
+                transform: translate(-50%, 0%);
+            }
+
+            .landing {
+
+                height: 90vh !important;
+
+            }
+
         }
 
         /* General style for the instagram logo */
         .instagram-logo {
             color: white;
-            font-size: 34px; /* Adjust size as needed */
+            font-size: 34px;
+            /* Adjust size as needed */
+        }
+
+        /* Style for the unmute button */
+        .unmute-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+
+        }
+
+        .unmute-button-container {
+            position: absolute;
+            top: -30px; /* Positioned at the top of its container */
+            right: 0;
+            display: flex;
+            justify-content: flex-end; /* Align content to the right */
+            width: 100%; /* Take full width of the container */
+            padding: 10px;
+            box-sizing: border-box;
+            z-index: 2;
+            
         }
     </style>
 </head>
@@ -310,7 +345,7 @@
             <a href="#shop">Shop</a>
         </nav>
 
-          <a href="#" class="instagram-logo"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="instagram-logo"><i class="fab fa-instagram"></i></a>
 
         <div class="dropdown-menu">
             <a href="#about" style="margin-top:100px;">About</a>
@@ -321,15 +356,21 @@
     </header>
 
     <section class="landing" style="padding:0;">
-        <video autoplay loop muted playsinline>
+        <video id="landing-video" autoplay loop muted playsinline>
             <source src="BOG x Super Sonic Booty Bangers： 2quid-2-2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
         <div class="landing-content">
-          <div style=" padding:20px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0)">
-            <p>Female and non-binary DJ collective on a mission to dismantle the industry’s gender
-            barriers.</p>
-           </div>
+            <div
+                style="position:relative; height:auto; align-items: end; padding:20px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0);">
+                 <div class="unmute-button-container">
+                       <button id="unmute-button" class="unmute-button">Unmute</button>
+                  </div>
+                <p style="line-height:1.2em">Female and non-binary DJ collective on a mission to dismantle the industry’s
+                    gender
+                    barriers.</p>
+            </div>
         </div>
     </section>
 
@@ -407,51 +448,66 @@
         <p>© 2025 BBD. All rights reserved.</p>
     </footer>
 
-   <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
-    const navLinks = document.querySelectorAll('header nav a');
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+        const navLinks = document.querySelectorAll('header nav a');
+        const video = document.getElementById('landing-video');
+        const unmuteButton = document.getElementById('unmute-button');
+        let isMuted = true;
 
-    menuToggle.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('active');
-        menuToggle.classList.toggle('active'); // Toggle active class for icon rotation
+        menuToggle.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active'); // Toggle active class for icon rotation
 
-    });
-
-    // Smooth scrolling for dropdown menu links
-    dropdownLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default jump
-            const targetId = link.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            dropdownMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
         });
-    });
 
-    // Smooth scrolling for regular nav links
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default jump
-            const targetId = link.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+        // Smooth scrolling for dropdown menu links
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default jump
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+                dropdownMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
-    });
-</script>
+
+        // Smooth scrolling for regular nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default jump
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Unmute Button Functionality
+        unmuteButton.addEventListener('click', () => {
+            if (isMuted) {
+                video.muted = false;
+                unmuteButton.textContent = 'Mute';
+            } else {
+                video.muted = true;
+                unmuteButton.textContent = 'Unmute';
+            }
+            isMuted = !isMuted;
+        });
+    </script>
 </body>
 
 </html>
