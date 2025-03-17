@@ -68,7 +68,7 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: end;
+            align-items: center;
             /* Center content vertically as well */
             text-align: center;
             color: #fff;
@@ -77,6 +77,7 @@
         }
 
        .landing video {
+        pointer-events: none; /* disables click/tap */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -262,7 +263,7 @@
 <body>
     <header>
     <div>
-         <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=70px>  <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=70px>  <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=70px>
+         <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px>  <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px>  <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px>
          </div>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -282,7 +283,7 @@
     </header>
 
     <section class="landing">
-        <video autoplay loop muted>
+        <video autoplay loop muted playsinline>
             <source src="BOG x Super Sonic Booty Bangers： 2quid-2-2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
