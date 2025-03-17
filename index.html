@@ -21,7 +21,7 @@
         body {
             line-height: 1.6;
             color: #fff;
-            background-color: #000;
+            background-color: black;
             scroll-behavior: smooth;
             /* Enable smooth scrolling */
         }
@@ -58,11 +58,12 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: end;
             /* Center content vertically as well */
             text-align: center;
             color: #fff;
             overflow: hidden;
+            width:100%;
             /*  Prevent video overflow */
         }
 
@@ -81,10 +82,13 @@
 
         .landing-content {
             /*  Added a container for text content to position it */
-            padding: 20px;
+            width:100%;
+              padding-bottom: 0px;
             /* Add some padding */
             z-index: 1;
             /*  Ensure the text content is above the video */
+            
+            
         }
 
         .landing h1 {
@@ -95,6 +99,7 @@
         .landing p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+            
         }
 
         .btn {
@@ -214,7 +219,7 @@
             z-index: -1;
         } 
 
-        .dropdown-menu a {
+        .dropdown-menu a { 
             display: block;
             padding: 1.5rem;
             font-size:2em;
@@ -276,6 +281,8 @@
             height:90vh !important;
              transform: translate(-50%, 0%);
              }
+             
+             
         }
 
         /* General style for the instagram logo */
@@ -309,16 +316,16 @@
         </div>
     </header>
 
-    <section class="landing">
+    <section class="landing" style="padding:0;">
         <video autoplay loop muted playsinline>
             <source src="BOG x Super Sonic Booty Bangers： 2quid-2-2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="landing-content">
-            <img src="https://f4.bcbits.com/img/a3935242977_16.jpg"
-                width=70% >
-            <p>New vinyl out now...</p>
-            <a href="#shop" class="btn">Shop Now</a>
+          <div style=" padding:20px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0)">
+            <p>Female and non-binary DJ collective on a mission to dismantle the industry’s gender
+            barriers.</p>
+           </div>
         </div>
     </section>
 
