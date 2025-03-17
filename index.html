@@ -74,20 +74,17 @@
             /*  Prevent video overflow */
         }
 
-        .landing video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            /* Place behind content */
-            transform: translateX(-50%) translateY(-50%);
-            object-fit: cover;
-            /*  Prevent skewing, keeps aspect ratio */
-        }
+       .landing video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
 
         .landing-content {
             /*  Added a container for text content to position it */
