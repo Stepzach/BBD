@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+when mobile screen size : center the lgomob image and make the dropdown menu button go to the left and add a instagram logo to the right : <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -201,7 +201,8 @@
             cursor: pointer;
             font-size: 1.5rem;
             color: #fff;
-            transition: transform 0.3s ease; /*  For icon animation */
+            transition: transform 0.4s ease; /*  For icon animation */
+            z-index:100000000;
         }
 
         .menu-toggle.active {
@@ -211,24 +212,28 @@
         .dropdown-menu {
        
             position: absolute;
-            top: 100%;
+            top: 0;
             right: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0.1) 100%);
+            background: black;
             width: 100%;
             text-align: center;
             overflow: hidden; /*  Hide overflowing content during animation */
-            max-height: 0; /*  Start with no height */
-            transition: max-height 0.3s ease; /*  Animate max-height */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            z-index: 1001;
+           height: 0; /*  Start with no height */
+          
+            transition: height 1.0s ease; /*  Animate max-height */
+           
+            z-index: -1;
+            
         }
 
         .dropdown-menu a { 
+        font-size:2em;
             display: block;
-            padding: 1rem;
+            padding: 1.5rem;
             color: #fff;
             text-decoration: none;
             transition: 0.3s;
+            border-bottom:solid 1px white;
         }
 
         .dropdown-menu a:hover {
@@ -236,10 +241,11 @@
         }
 
         .dropdown-menu.active {
-            max-height: 600px; /* Adjust as needed based on content.  Make sure it's bigger than your menu */    padding-bottom:20px;
-             padding-top:100px;
-             margin-top:-110px;
-             z-index: -1;
+         top:0;
+    z-index:-1;
+         height: 200vw !important; /* Adjust as needed based on content.  Make sure it's bigger than your menu */    
+            
+    
         }
 
 
@@ -260,6 +266,7 @@
             .menu-toggle {
                 display: block;
             }
+           
         }
     </style>
 </head>
@@ -267,7 +274,7 @@
 <body>
     <header>
     <div>
-         <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px>  <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px>  <img src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px>
+         <img class="lgomob" src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px> 
          </div>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -279,7 +286,7 @@
             <a href="#shop">Shop</a>
         </nav>
         <div class="dropdown-menu">
-            <a href="#about">About</a>
+            <a href="#about" style="margin-top:100px;">About</a>
             <a href="#team">Residents</a>
             <a href="#events">Events</a>
             <a href="#shop">Shop</a>
