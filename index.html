@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopEase - E-Commerce Template</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Existing CSS - keep this */
         * {
@@ -20,11 +22,11 @@
             line-height: 1.6;
             color: #fff;
             background-color: #000;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
         }
 
         header {
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%,  rgba(0, 0, 0, 0) 100%);
-
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
             color: #fff;
             padding: 1rem 2rem;
             display: flex;
@@ -54,10 +56,12 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: end; /* Center content vertically as well */
+            align-items: end;
+            /* Center content vertically as well */
             text-align: center;
             color: #fff;
-            overflow: hidden; /*  Prevent video overflow */
+            overflow: hidden;
+            /*  Prevent video overflow */
         }
 
         .landing video {
@@ -68,15 +72,19 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: -1; /* Place behind content */
+            z-index: -1;
+            /* Place behind content */
             transform: translateX(-50%) translateY(-50%);
-            object-fit: cover;  /*  Prevent skewing, keeps aspect ratio */
+            object-fit: cover;
+            /*  Prevent skewing, keeps aspect ratio */
         }
 
         .landing-content {
             /*  Added a container for text content to position it */
-            padding: 20px; /* Add some padding */
-            z-index: 1;  /*  Ensure the text content is above the video */
+            padding: 20px;
+            /* Add some padding */
+            z-index: 1;
+            /*  Ensure the text content is above the video */
         }
 
 
@@ -183,16 +191,23 @@
             cursor: pointer;
             font-size: 1.5rem;
             color: #fff;
+            transition: transform 0.3s ease; /*  For icon animation */
+        }
+
+        .menu-toggle.active {
+            transform: rotate(90deg); /* Rotate the icon when active */
         }
 
         .dropdown-menu {
             position: absolute;
             top: 100%;
             right: 0;
-            background: #111;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 5%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.2) 95%, rgba(0, 0, 0, 0.1) 100%);
             width: 100%;
             text-align: center;
-            display: none;
+            overflow: hidden; /*  Hide overflowing content during animation */
+            max-height: 0; /*  Start with no height */
+            transition: max-height 0.3s ease; /*  Animate max-height */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             z-index: 1001;
         }
@@ -210,7 +225,7 @@
         }
 
         .dropdown-menu.active {
-            display: block;
+            max-height: 400px; /* Adjust as needed based on content.  Make sure it's bigger than your menu */
         }
 
 
@@ -269,19 +284,22 @@
 
     <section class="about" id="about">
         <h2>About Us</h2>
-        <p>Bad Bitch Dubz is a female and non-binary DJ collective on a mission to dismantle the industry’s gender barriers with a sonic revolution that ignited in early 2023.</p>
+        <p>Bad Bitch Dubz is a female and non-binary DJ collective on a mission to dismantle the industry’s gender
+            barriers with a sonic revolution that ignited in early 2023.</p>
     </section>
 
     <section class="team" id="team">
         <h2>Residents</h2>
         <div class="team-members">
             <div class="team-member">
-                <img src="https://themusicessentials.com/wp-content/uploads/2023/05/TOP-FEMALE-DJS-2023-1.jpg" alt="Team Member">
+                <img src="https://themusicessentials.com/wp-content/uploads/2023/05/TOP-FEMALE-DJS-2023-1.jpg"
+                    alt="Team Member">
                 <h3>Jane Doe</h3>
                 <p>CEO & Founder</p>
             </div>
             <div class="team-member">
-                <img src="https://storm-djs.com/wp-content/uploads/2022/02/DJ-Franks-Frank-S-Top-Female-DJ-London-Storm-DJs-Agency-Hire-03.jpeg" alt="Team Member">
+                <img src="https://storm-djs.com/wp-content/uploads/2022/02/DJ-Franks-Frank-S-Top-Female-DJ-London-Storm-DJs-Agency-Hire-03.jpeg"
+                    alt="Team Member">
                 <h3>John Smith</h3>
                 <p>Chief Marketing Officer</p>
             </div>
@@ -340,9 +358,46 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+        const navLinks = document.querySelectorAll('header nav a');
 
         menuToggle.addEventListener('click', () => {
             dropdownMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active'); // Toggle active class for icon rotation
+
+        });
+
+        // Smooth scrolling for dropdown menu links
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default jump
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                dropdownMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Smooth scrolling for regular nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default jump
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     </script>
 </body>
