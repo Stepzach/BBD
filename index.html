@@ -363,7 +363,7 @@
     </header>
 
     <section class="landing" style="padding:0;">
-        <video id="landing-video" autoplay loop muted playsinline>
+        <video id="landing-video" autoplay loop muted playsinline poster="path/to/your/fallback-image.jpg">
             <source src="BOG x Super Sonic Booty Bangers： 2quid-2-2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -499,7 +499,7 @@
                 const targetElement = document.querySelector(targetId);
 
                 if (targetElement) {
-                    targetElement.scrollIntoView({
+                    targetElement.scrollIntoView({ 
                         behavior: 'smooth'
                     });
                 }
@@ -510,15 +510,41 @@
         unmuteButton.addEventListener('click', () => {
             if (isMuted) {
                 video.muted = false;
-                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/medium-volume--v1.png";
+                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/mute--v1.png";
                 unmuteIcon.alt = "Mute";
             } else {
                 video.muted = true;
-                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/mute--v1.png";
+                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/medium-volume--v1.png";
                 unmuteIcon.alt = "Unmute";
             }
             isMuted = !isMuted;
         });
+
+          document.addEventListener('DOMContentLoaded', function() { // Wait for the DOM to load
+                const video = document.getElementById('landing-video');
+                let autoplayInitiated = false;
+
+                function enableAutoplay() {
+                    if (!autoplayInitiated) {
+                        video.play().catch(error => {
+                            // Handle the promise rejection, which likely means autoplay was prevented
+                            console.error("Autoplay prevented:", error);
+                        });
+                        autoplayInitiated = true;
+                    }
+                }
+
+                // Listen for a user interaction (e.g., click, touch, scroll)
+                document.addEventListener('click', enableAutoplay);
+                document.addEventListener('touchstart', enableAutoplay); // For touch devices
+                window.addEventListener('scroll', enableAutoplay, { once: true }); //Autoplay after the first scroll
+
+                // Optional:  Attempt autoplay immediately (may or may not work)
+                //  Only do this *after* ensuring muted and playsinline are set
+                video.play().catch(error => {
+                    console.error("Initial autoplay prevented:", error);
+                });
+            });
     </script>
 </body>
 
