@@ -308,26 +308,33 @@
 
         /* Style for the unmute button */
         .unmute-button {
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
+            background: rgba(0, 0, 0, 0.0);
             border: none;
-            padding: 0.5rem 1rem;
             cursor: pointer;
             border-radius: 5px;
+            padding: 0; /* Remove padding, image will fill it */
+            width: 24px;  /* Adjust as needed */
+            height: 24px; /* Adjust as needed */
+            overflow: hidden;  /* Hide any image overflow */
+        }
 
+        .unmute-button img {
+            display: block;
+            width: 100%;  /* Make the image fill the button */
+            height: 100%; /* Make the image fill the button */
+            object-fit: contain;  /* Ensure the whole image fits, may add padding */
         }
 
         .unmute-button-container {
             position: absolute;
-            top: -30px; /* Positioned at the top of its container */
-            right: 0;
+            top: -38px; /* Positioned at the top of its container */
+            right: 20px;
             display: flex;
             justify-content: flex-end; /* Align content to the right */
             width: 100%; /* Take full width of the container */
             padding: 10px;
             box-sizing: border-box;
             z-index: 2;
-            
         }
     </style>
 </head>
@@ -362,10 +369,11 @@
         </video>
 
         <div class="landing-content">
-            <div
-                style="position:relative; height:auto; align-items: end; padding:20px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0);">
+            <div style="position:relative; height:auto; align-items: end; padding:20px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0);">
                  <div class="unmute-button-container">
-                       <button id="unmute-button" class="unmute-button">Unmute</button>
+                       <button id="unmute-button" class="unmute-button">
+                          <img id="unmute-icon" src="https://www.iconsdb.com/icons/preview/white/volume-up-4-xxl.png" alt="Unmute">
+                       </button>
                   </div>
                 <p style="line-height:1.2em">Female and non-binary DJ collective on a mission to dismantle the industry’s
                     gender
@@ -455,6 +463,7 @@
         const navLinks = document.querySelectorAll('header nav a');
         const video = document.getElementById('landing-video');
         const unmuteButton = document.getElementById('unmute-button');
+        const unmuteIcon = document.getElementById('unmute-icon');
         let isMuted = true;
 
         menuToggle.addEventListener('click', () => {
@@ -500,10 +509,12 @@
         unmuteButton.addEventListener('click', () => {
             if (isMuted) {
                 video.muted = false;
-                unmuteButton.textContent = 'Mute';
+                unmuteIcon.src = "https://www.iconsdb.com/icons/preview/white/mute-2-xxl.png";
+                unmuteIcon.alt = "Mute";
             } else {
                 video.muted = true;
-                unmuteButton.textContent = 'Unmute';
+                unmuteIcon.src = "https://www.iconsdb.com/icons/preview/white/volume-up-4-xxl.png";
+                unmuteIcon.alt = "Unmute";
             }
             isMuted = !isMuted;
         });
