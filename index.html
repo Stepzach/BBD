@@ -17,14 +17,18 @@
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
-
+        html,
         body {
             line-height: 1.6;
             color: #fff;
             background-color: black;
             scroll-behavior: smooth;
             /* Enable smooth scrolling */
-            transition: background-color 0.3s ease; /* Add transition for smooth color change */
+           
+        }
+        
+         body {
+            transition: background-color 0.3s ease;
         }
 
         /* Add a class to the body when scrolled past the landing section */
@@ -165,7 +169,7 @@
         .team-member,
         .event,
         .product {
-            background: #222;
+            background: rgba(102, 78, 255, 1);
             color: #eee;
             padding: 1.5rem;
             border-radius: 10px;
@@ -392,6 +396,25 @@
             box-sizing: border-box;
             z-index: 2;
         }
+        
+         .snap-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .snap-section {
+            scroll-snap-align: start;
+            height: 100vh;
+        }
+        
+        .rast {
+        color: white;
+           }
+           
+           .rast.scrolled {
+        color: black !important;
+           }
     </style>
 </head>
 
@@ -425,7 +448,8 @@
         </div>
     </header>
 
-    <section class="landing" style="padding:0;">
+    <div class="snap-container" id="snapContainer">
+        <section class="landing snap-section" style="padding:0;">
         <video id="landing-video" autoplay loop muted playsinline poster="path/to/your/fallback-image.jpg">
             <source src="BOG x Super Sonic Booty Bangers： 2quid-2-2.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -446,15 +470,15 @@
         </div>
     </section>
 
-    <section class="about" id="about" style="padding-top:100px;">
+    <section class="about snap-section" id="about" style="padding-top:100px;">
         <h2>About Us</h2>
-        <p>Bad Bitch Dubz is a female and non-binary DJ collective on a mission to dismantle the industry’s gender
+        <p class="rast">Bad Bitch Dubz is a female and non-binary DJ collective on a mission to dismantle the industry’s gender
             barriers with a sonic revolution that ignited in early 2023.</p>
         <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" width=90%>
     </section>
-
+ </div>
     <section class="team" id="team">
-        <h2>Residents</h2>
+        <h2 style="color:black">Residents</h2>
         <div class="team-members">
             <div class="team-member">
                 <img src="https://www.gigheaven.com/user_photos/440-sq/1711706274/95150.jpg" alt="Team Member">
@@ -475,7 +499,7 @@
     </section>
 
     <section class="events" id="events">
-        <h2>Upcoming Events</h2>
+        <h2 style="color:black">Upcoming Events</h2>
         <div class="event-list">
             <div class="event">
                 <img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg"
@@ -493,7 +517,7 @@
     </section>
 
     <section class="shop" id="shop">
-        <h2>Shop</h2>
+        <h2 style="color:black">Shop</h2>
         <div class="products">
             <div class="product">
                 <img src="https://m.media-amazon.com/images/I/61-OgVR4TsL._UF894,1000_QL80_.jpg" alt="Product">
@@ -519,9 +543,9 @@
     <footer>
         <p>© 2025 BBD. All rights reserved.</p>
     </footer>
-
+ 
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
+          const menuToggle = document.querySelector('.menu-toggle');
         const dropdownMenu = document.querySelector('.dropdown-menu');
         const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
         const navLinks = document.querySelectorAll('header nav a');
@@ -531,9 +555,10 @@
         const header = document.querySelector('header');
         const landing = document.querySelector('.landing');
         const body = document.querySelector('body');
-        const h2 = document.querySelector('h2');
-       
-       
+        const h2Elements = document.querySelectorAll('h2'); // Select ALL h2 elements
+        const snapContainer = document.getElementById('snapContainer');
+        const rast = document.querySelector('.rast');
+
         let isMuted = true;
 
         menuToggle.addEventListener('click', () => {
@@ -568,7 +593,7 @@
                 const targetElement = document.querySelector(targetId);
 
                 if (targetElement) {
-                    targetElement.scrollIntoView({ 
+                    targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
                 }
@@ -589,14 +614,14 @@
             isMuted = !isMuted;
         });
 
-        document.addEventListener('DOMContentLoaded', function() { // Wait for the DOM to load
+        document.addEventListener('DOMContentLoaded', function () { // Wait for the DOM to load
             const video = document.getElementById('landing-video');
             let autoplayInitiated = false;
 
             function enableAutoplay() {
                 if (!autoplayInitiated) {
                     video.play().catch(error => {
-                        // Handle the promise rejection, which likely means autoplay was prevented
+                    // Handle the promise rejection, which likely means autoplay was prevented
                         console.error("Autoplay prevented:", error);
                     });
                     autoplayInitiated = true;
@@ -615,27 +640,30 @@
             });
         });
 
-
-        // Function to check if the landing section is out of view
         function checkScroll() {
             const landingHeight = landing.offsetHeight;
-            const scrollPosition = window.scrollY;
+            // Use snapContainer's scrollTop
+            const scrollPosition = snapContainer.scrollTop;
 
             if (scrollPosition >= landingHeight) {
                 body.classList.add('scrolled');
                 header.classList.add('scrolled');
                 menuToggle.classList.add('scrolled');
-                 h2.classList.add('scrolled');
+                rast.classList.add('scrolled');
+                h2Elements.forEach(h2 => h2.classList.add('scrolled'));  // Apply to all h2s
+               
             } else {
                 body.classList.remove('scrolled');
                 header.classList.remove('scrolled');
                 menuToggle.classList.remove('scrolled');
-                 h2.classList.remove('scrolled');
+                 rast.classList.remove('scrolled');
+                h2Elements.forEach(h2 => h2.classList.remove('scrolled')); // Remove from all h2s
+               
             }
         }
 
-        // Listen for the scroll event
-        window.addEventListener('scroll', checkScroll);
+        // Listen to the snapContainer scroll event
+        snapContainer.addEventListener('scroll', checkScroll);
     </script>
 </body>
 
