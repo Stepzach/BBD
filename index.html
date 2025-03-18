@@ -588,7 +588,7 @@
         </div>
     </section>
 
-    <section class="shop snap-section" id="shop" style="padding-top:100px;">
+    <section class="shop snap-section" id="shop" style="padding-top:100px; background-color:white;">
         <h2 style="color:black">Shop</h2>
         <div class="products">
             <div class="product">
@@ -612,7 +612,7 @@
         </div>
     </section>
 
-    <footer class="snap-section">
+    <footer class="snap-section" style="background-color:white; margin-top:0; color: black">
         <p>© 2025 BBD. All rights reserved.</p>
     </footer>
 
@@ -724,9 +724,10 @@
         function checkScroll() {
             const landingHeight = landing.offsetHeight;
             const scrollPosition = window.scrollY;
+            const offset = 50;
 
 
-            if (scrollPosition >= landingHeight) {
+            if (scrollPosition > landingHeight - offset) {
                 body.classList.add('scrolled');
                 header.classList.add('scrolled');
                 menuToggle.classList.add('scrolled');
