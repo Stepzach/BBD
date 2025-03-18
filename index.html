@@ -24,6 +24,13 @@
             background-color: black;
             scroll-behavior: smooth;
             /* Enable smooth scrolling */
+            transition: background-color 0.3s ease; /* Add transition for smooth color change */
+        }
+
+        /* Add a class to the body when scrolled past the landing section */
+        body.scrolled {
+            background-color: white;
+            color: black; /* Ensure default text color is black when scrolled */
         }
 
         header {
@@ -38,6 +45,13 @@
             left: 0;
             width: 100%;
             z-index: 1000;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth color change */
+        }
+
+        /* Add a class to the header when scrolled past the landing section */
+        header.scrolled {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 100%);
+            color: black;
         }
 
         header nav a {
@@ -46,6 +60,11 @@
             font-size: 1.6em;
             text-decoration: none;
             transition: 0.3s;
+        }
+
+        /* Change navigation links color when scrolled */
+        header.scrolled nav a {
+            color: black;
         }
 
         header nav a:hover {
@@ -125,6 +144,7 @@
         .events,
         .shop {
             text-align: center;
+            color: black; /* Set default text color to black for these sections */
         }
 
         .about p {
@@ -197,6 +217,11 @@
             transition: transform 0.4s ease;
             /*  For icon animation */
         }
+        
+           .menu-toggle.scrolled {
+                 color: black;
+
+              }
 
         .menu-toggle.active {
             transform: rotate(90deg);
@@ -207,7 +232,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            background: black;
+            background: rgba(102, 78, 255, 1);
             width: 100%;
             text-align: center;
             overflow: hidden;
@@ -238,6 +263,11 @@
             /* Adjust as needed based on content */
         }
 
+          /* Change dropdown menu links color when scrolled */
+        body.scrolled .dropdown-menu a {
+            color: black;
+            border-bottom: solid 1px black;
+        }
         /* Media Query for Mobile */
         @media (max-width: 768px) {
             header {
@@ -285,6 +315,12 @@
                 color: white;
             }
 
+              /* Style the instagram logo WHEN SCROLLED*/
+              body.scrolled .instagram-logo{
+                 color: black;
+
+              }
+
             .landing video {
                 top: 0;
                 height: 90vh !important;
@@ -298,10 +334,30 @@
             }
 
         }
+        
+        h2 {
+
+               color: white;
+
+            }
+            
+            h2.scrolled {
+
+               color: black;
+
+            }
+         
 
         /* General style for the instagram logo */
         .instagram-logo {
             color: white;
+            font-size: 34px;
+            /* Adjust size as needed */
+        }
+
+          /* General style for the instagram logo */
+          header.scrolled .instagram-logo {
+            color: black;
             font-size: 34px;
             /* Adjust size as needed */
         }
@@ -359,6 +415,13 @@
             <a href="#team">Residents</a>
             <a href="#events">Events</a>
             <a href="#shop">Shop</a>
+            <div style=" width: 100%; display: flex; gap: 10px; align-items: center; justify-content: center;">
+  
+  <a href="#" class="tiktok-logo" style="border-bottom: none;"><i class="fab fa-tiktok"></i></a>
+  <a href="#" class="bandcamp-logo" style=" border-bottom: none;"><i class="fab fa-bandcamp"></i></a>
+  <a href="#" class="soundcloud-logo" style=" border-bottom: none;"><i class="fab fa-soundcloud"></i></a>
+</div>
+
         </div>
     </header>
 
@@ -373,17 +436,17 @@
 ">
                  <div class="unmute-button-container">
                        <button id="unmute-button" class="unmute-button">
-                          <img id="unmute-icon" src="https://img.icons8.com/ios/50/FFFFFF/medium-volume--v1.png" alt="Unmute">
+                          <img id="unmute-icon" src="https://img.icons8.com/ios/50/FFFFFF/mute--v1.png" alt="Unmute">
                        </button>
                   </div>
                 <p style="line-height:1.2em">Female and non-binary DJ collective on a mission to dismantle the industry’s
                     gender
                     barriers.</p>
-            </div>
+            </div> 
         </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about" id="about" style="padding-top:100px;">
         <h2>About Us</h2>
         <p>Bad Bitch Dubz is a female and non-binary DJ collective on a mission to dismantle the industry’s gender
             barriers with a sonic revolution that ignited in early 2023.</p>
@@ -465,6 +528,12 @@
         const video = document.getElementById('landing-video');
         const unmuteButton = document.getElementById('unmute-button');
         const unmuteIcon = document.getElementById('unmute-icon');
+        const header = document.querySelector('header');
+        const landing = document.querySelector('.landing');
+        const body = document.querySelector('body');
+        const h2 = document.querySelector('h2');
+       
+       
         let isMuted = true;
 
         menuToggle.addEventListener('click', () => {
@@ -510,41 +579,63 @@
         unmuteButton.addEventListener('click', () => {
             if (isMuted) {
                 video.muted = false;
-                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/mute--v1.png";
+                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/medium-volume--v1.png";
                 unmuteIcon.alt = "Mute";
             } else {
                 video.muted = true;
-                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/medium-volume--v1.png";
+                unmuteIcon.src = "https://img.icons8.com/ios/50/FFFFFF/mute--v1.png";
                 unmuteIcon.alt = "Unmute";
             }
             isMuted = !isMuted;
         });
 
-          document.addEventListener('DOMContentLoaded', function() { // Wait for the DOM to load
-                const video = document.getElementById('landing-video');
-                let autoplayInitiated = false;
+        document.addEventListener('DOMContentLoaded', function() { // Wait for the DOM to load
+            const video = document.getElementById('landing-video');
+            let autoplayInitiated = false;
 
-                function enableAutoplay() {
-                    if (!autoplayInitiated) {
-                        video.play().catch(error => {
-                            // Handle the promise rejection, which likely means autoplay was prevented
-                            console.error("Autoplay prevented:", error);
-                        });
-                        autoplayInitiated = true;
-                    }
+            function enableAutoplay() {
+                if (!autoplayInitiated) {
+                    video.play().catch(error => {
+                        // Handle the promise rejection, which likely means autoplay was prevented
+                        console.error("Autoplay prevented:", error);
+                    });
+                    autoplayInitiated = true;
                 }
+            }
 
-                // Listen for a user interaction (e.g., click, touch, scroll)
-                document.addEventListener('click', enableAutoplay);
-                document.addEventListener('touchstart', enableAutoplay); // For touch devices
-                window.addEventListener('scroll', enableAutoplay, { once: true }); //Autoplay after the first scroll
+            // Listen for a user interaction (e.g., click, touch, scroll)
+            document.addEventListener('click', enableAutoplay);
+            document.addEventListener('touchstart', enableAutoplay); // For touch devices
+            window.addEventListener('scroll', enableAutoplay, { once: true }); //Autoplay after the first scroll
 
-                // Optional:  Attempt autoplay immediately (may or may not work)
-                //  Only do this *after* ensuring muted and playsinline are set
-                video.play().catch(error => {
-                    console.error("Initial autoplay prevented:", error);
-                });
+            // Optional:  Attempt autoplay immediately (may or may not work)
+            //  Only do this *after* ensuring muted and playsinline are set
+            video.play().catch(error => {
+                console.error("Initial autoplay prevented:", error);
             });
+        });
+
+
+        // Function to check if the landing section is out of view
+        function checkScroll() {
+            const landingHeight = landing.offsetHeight;
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition >= landingHeight) {
+                body.classList.add('scrolled');
+                header.classList.add('scrolled');
+                menuToggle.classList.add('scrolled');
+                 h2.classList.add('scrolled');
+            } else {
+                body.classList.remove('scrolled');
+                header.classList.remove('scrolled');
+                menuToggle.classList.remove('scrolled');
+                 h2.classList.remove('scrolled');
+            }
+        }
+
+        // Listen for the scroll event
+        window.addEventListener('scroll', checkScroll);
     </script>
 </body>
 
