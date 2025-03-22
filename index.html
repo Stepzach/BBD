@@ -48,7 +48,7 @@
         }
 
         header {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%); 
             color: #fff;
             padding: 1rem 2rem;
             display: flex;
@@ -572,23 +572,35 @@
         .image-slider img.active {
             opacity: 1;
         }
+         
+        
+        
+
+        body.scrolled .lgomob {
+            width: 70px !important; /* Override inline style when scrolled */
+        }
+
+        body.scrolled .menu-toggle,
+        body.scrolled .instagram-logo {
+            margin-top: -20px !important; /* Override inline styles */
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="menu-toggle">
+    <header> 
+        <div class="menu-toggle" style="margin-top:-70px;">
             <i class="fas fa-bars"></i>
         </div>
-         <a href="#home" class="lgomob"><img class="lgomob" src="https://stepzach.github.io/BBD/IMG_6747.png" width=60px href="#"></a>
-        <nav>
+         <a href="#home" class="lgomob"><img class="lgomob" src="https://lh3.google.com/u/0/d/1a1PldxAKd2jRxAHmTOUdZLmMMLouhK0B=w2940-h1680-iv1" width=130px href="#"></a>
+        <nav style="margin-top:-70px;">
             <a href="#about">About</a>
             <a href="#team">Residents</a>
             <a href="#events">Events</a>
             <a href="#shop">Shop</a>
         </nav>
 
-        <a href="#" class="instagram-logo"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="instagram-logo" style="margin-top:-70px;"><i class="fab fa-instagram"></i></a>
 
         <div class="dropdown-menu">
             <a href="#about" style="margin-top:100px; color: white !important; ">About</a>
@@ -762,8 +774,7 @@
     <footer class="snap-section" style="background-color:white; margin-top:0; color: black">
         <p>© 2025 BBD. All rights reserved.</p>
     </footer>
-
- <script>
+<script>
         const menuToggle = document.querySelector('.menu-toggle');
         const dropdownMenu = document.querySelector('.dropdown-menu');
         const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
@@ -804,6 +815,11 @@
         let images = window.innerWidth <= 768 ? mobileImages : desktopImages;
         let imageIndex = 0;
 
+
+        function getRandomIndex(arrayLength) {
+            return Math.floor(Math.random() * arrayLength);
+        }
+
         function changeImage() {
             // Remove active class from current image
             const currentActive = document.querySelector('.image-slider img.active');
@@ -818,10 +834,8 @@
             if (nextImage) {
                 nextImage.classList.add('active');
             }
-
-           
         }
-        
+
          // Create image elements
             images.forEach((src, index) => {
                 const img = document.createElement('img');
@@ -831,8 +845,12 @@
                 imageSlider.appendChild(img);
             });
 
-            // Make the first image active initially
-            document.querySelector('.image-slider img[data-index="0"]').classList.add('active');
+        // Get a random starting index
+        let initialIndex = getRandomIndex(images.length);
+        imageIndex = initialIndex; // Set the global index to the random index
+
+        // Add 'active' class to the randomly selected image
+        document.querySelector(`.image-slider img[data-index="${initialIndex}"]`).classList.add('active');
 
         setInterval(changeImage, 8000); // Change image every 8 seconds
 
