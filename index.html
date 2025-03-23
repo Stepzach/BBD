@@ -159,7 +159,7 @@
         }
 
         section {
-            padding: 4rem 2rem;
+            padding: 4rem 0rem;
             margin: auto;
         }
 
@@ -610,6 +610,29 @@
      .instagram-logo {
             margin-top: -38px !important; /* Override inline styles */
         }
+        
+        .team-member img { 
+           right:0 !important; 
+            left:0 !important; 
+        }
+         .team-member p,
+         .team-member h3 { 
+           text-align:left !important;
+        }
+        
+         .fab fa-instagram1,
+         .playatt { 
+         
+           display:none !important;
+        }
+        
+        .team-members,
+        .bbdresi { 
+          
+          padding-left:3em;
+          padding-right:3em;
+          
+        }
        
         
         }
@@ -630,7 +653,7 @@
          
          </a>
         <nav style="margin-top:-40px;">
-            <a href="#about">About</a>
+            <a href="#about">About</a> 
             <a href="#team">Residents</a>
             <a href="#events">Events</a>
             <a href="#shop">Shop</a>
@@ -683,16 +706,16 @@
                     <img class="bounce-arrow" id="scroll-arrow"
                         src="https://popupfilmresidency.org/wp-content/uploads/2019/05/white-down-arrow-png-2.png"
                         alt="Animated Arrow" style="cursor: pointer; opacity:0.7">
-                </div>
+                </div> 
             </div> 
         </div>
-    </section>
+    </section> 
 
     <section class="about snap-section" id="about" style="padding-top:0px; background-color:rgba(30, 43, 74, 1)">
      <div style="position:relative; height:80px; padding:0px; margin-top:-32px; background: linear-gradient(to bottom, rgba(30, 43, 74, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
      
        
-     
+      <div class="bbdresi">
                     <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
   <span style="color:#E4E2EB !important">Brea⚡︎king boundaries</span>
   <span style="color:#AFA8C3 "> in the Bristol music scene since 2023.</span>
@@ -700,7 +723,7 @@
 
                     
                     <div style="display: flex; align-items: center; padding-left:1em; padding-right:1em; margin-bottom: 1em;">
-    <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" style="margin-right: 0em; margin-left:0px; overflow: hidden; width:100%; ">
+    <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" style="margin-right: 0em; margin-left:0px; overflow: hidden; width:100%; max-width:600px;"> 
    
 </div>
 
@@ -720,6 +743,8 @@
     
     
 </div>
+
+</div>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
   
@@ -728,13 +753,14 @@
     <section class="team snap-section" id="team" data-offset="90" style=" padding-left:0; padding-right:0; background-color:rgba(27, 26, 36, 1); padding-top:0; ">
     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
     
-    
+    <div class="bbdresi">
         <h2 style="color: white !important; margin-top: -2px; white-space: nowrap; overflow: hidden; text-align: left; font-size: 40px; margin-left:15px; padding-top:5px; font-family: Montserrat;">
   Residents
-</h2>
+</h2> 
 
         
          <p class="rast" style="  font-size:1.3em; line-height:1.4em; font-family: Montserrat; padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-right: 15px; margin-bottom:40px;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
+         </div>
         <div class="team-members" style="overflow: hidden !important;">
         
             <div class="team-member" style="position: relative; display: inline-block; ">
@@ -761,10 +787,10 @@
 
 
     
-    <!-- Overlay text -->
-    <div style="position: absolute; bottom: 120px; right: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <!-- Overlay text --> 
+    <div class="playatt" style="position: absolute; bottom: 120px; right: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="position:relative; font-size:17px; top:2px; margin-right:5px; color: #AFA8C3"></i> @username_1
+        <i class="fab fa-instagram1" style="position:relative; font-size:17px; top:2px; margin-right:5px; color: #AFA8C3"></i> @username_1
       
     </div> 
 
@@ -785,9 +811,9 @@
   ">
     
     <!-- Overlay text -->
-    <div style="position: absolute; bottom: 315px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div class="playatt" style="position: absolute; bottom: 315px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i>  @username_2
+        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i>  @username_2
       
     </div>
 
@@ -807,9 +833,9 @@
   ">
     
     <!-- Overlay text -->
-    <div style="position: absolute; bottom: 317px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div class="playatt" style="position: absolute; bottom: 317px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_03
+        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_03
         
       
     </div> 
@@ -831,9 +857,9 @@
   ">
     
     <!-- Overlay text -->
-    <div style="position: absolute; bottom: 283px; left: 10px;  color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div class="playatt" style="position: absolute; bottom: 283px; left: 10px;  color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_04
+        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_04
       
     </div>
 
@@ -849,7 +875,7 @@
     <section class="events snap-section" id="events" data-offset="100" style="padding-left:0; padding-right:0; padding-top:100px; background-color:rgba(19, 45, 35, 1);">
      <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(19, 45, 35, 1) 0%, rgba(27, 26, 36, 1) 100%);"> </div>
      
-     
+      <div class="bbdresi">
        <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
   <span style="color:#E4E2EB !important">Upcoming Events</span>
   <span style="color:#AFA8C3 ">in and around Bristol</span>
@@ -978,15 +1004,16 @@
     </table>
 </div>
 
-
+</div>
 
     </section>
 
     <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; padding-left:0; padding-right:0; background-color: rgba(32, 56, 65, 1)">
     
-    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to bottom, rgba(19, 45, 35, 1) 0%, rgba(32, 56, 65, 1) 100%);"> </div>
     
+    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to bottom, rgba(19, 45, 35, 1) 0%, rgba(32, 56, 65, 1) 100%);"> </div> 
     
+     <div class="bbdresi">
          <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
   <span style="color:#E4E2EB !important">Shop</span>
   <span style="color:#AFA8C3 ">and Support us</span> 
@@ -1003,12 +1030,12 @@
     </p>
         <div class="products">
             <div class="product" style="padding-bottom:40px;" >
-                <img src="https://f4.bcbits.com/img/a3935242977_16.jpg" style="width:90%" alt="Product">
-                <h3>BBD001 - £20</h3>
+                <img src="https://f4.bcbits.com/img/a3935242977_16.jpg" style="width:90%; max-width:600px;" alt="Product" > 
+                <h3>BBD001 - £20</h3>  
                
                 <a href="#" class="btn" style="padding:5px 9px; font-size:1.3em;">View</a>
             </div>
-           
+           </div>
         </div>
     </section>
 
