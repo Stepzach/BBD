@@ -755,7 +755,7 @@
       
     </div> 
 
-    <h3 style=" text-align: left; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px; font-family: Montserrat; ">Resident Name</h3>
+    <h3 style=" text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px; font-family: Montserrat; ">Resident Name</h3>
     <p style=" font-family: Montserrat; text-align: left; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
@@ -778,7 +778,7 @@
       
     </div>
 
-    <h3 style="text-align: right; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
     <p style="text-align: right; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
@@ -801,7 +801,7 @@
       
     </div> 
 
-    <h3 style="text-align: left; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <h3 style="text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
     <p style="text-align: left; color: #AFA8C3  !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
@@ -824,8 +824,8 @@
       
     </div>
 
-    <h3 style="text-align: right; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: right; color: #AFA8C3  !important; margin-top:-5px;">Description / Role</p>
+    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: right; color: #AFA8C3  !important; margin-top:-5px; padding-bottom:80px">Description / Role</p>
 </div>
 
 
@@ -833,54 +833,180 @@
         </div>
     </section>
 
-    <section class="events snap-section" id="events" style="padding-top:100px; background-color:white;">
-        <h2 style="color:black">Upcoming Events</h2>
-        <div class="event-list">
-            <div class="event">
-                <img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg"
-                    alt="Event">
-                <h3>Event 1</h3>
-                <p>@Location - March 25th</p>
-            </div>
-            <div class="event">
-                <img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg"
-                    alt="Event">
-                <h3>Event 2</h3>
-                <p>@Location - April 10th</p>
-            </div>
-        </div>
+    <section class="events snap-section" id="events" data-offset="100" style="padding-top:100px; background-color:rgba(19, 45, 35, 1);">
+     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(19, 45, 35, 1) 0%, rgba(27, 26, 36, 1) 100%);"> </div>
+     
+     
+       <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
+  <span style="color:#E4E2EB !important">Upcoming Events</span>
+  <span style="color:#AFA8C3 ">in and around Bristol</span>
+</p>
+        
+        
+   
+
+          <style>
+          
+          
+       
+        .table-container {
+            width: 100%;
+            margin: 50px auto;
+            background-color: transparent;
+            
+           
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            color: #E4E2EB;
+            
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: transparent;
+        }
+        .expand-row {
+            cursor: pointer;
+            font-size: 18px;
+            color: #333;
+        }
+        .expanded-row {
+            display: none;
+            background-color: #f9f9f9;
+            text-align: left;
+            padding: 20px;
+        }
+        .expanded-row img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .buy-tickets-btn {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buy-tickets-btn:hover {
+            background-color: #0056b3;
+        }
+        .down-arrow {
+            font-size: 20px;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        .expanded .down-arrow {
+            transform: rotate(180deg);
+        }
+         
+        @media (max-width: 769px) {
+   .down-arrow {
+   display:none !important;
+   
+   }
+    </style>
+        
+        
+        <div class="table-container" style="padding-bottom:100px;">
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th></th>
+                <th>Location</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="event-row">
+                <td>March 25th</td>
+                <td><img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg" alt="Event 1" width="80"></td>
+                <td>@Location</td>
+                <td><button class="buy-tickets-btn">Tickets</button></td>
+                <td class="expand-row">
+                    <span class="down-arrow">▼</span>
+                </td>
+            </tr>
+            <tr class="expanded-row">
+                <td colspan="5">
+                    <div>
+                        <img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg" alt="Event 1 Large">
+                        <p>This is a description of Event 1. The event includes exciting activities and a variety of performances!</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="event-row">
+                <td>April 10th</td>
+                <td><img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg" alt="Event 2" width="80"></td>
+                <td>@Location</td>
+                <td><button class="buy-tickets-btn">Tickets</button></td>
+                <td class="expand-row">
+                    <span class="down-arrow">▼</span>
+                </td>
+            </tr>
+            <tr class="expanded-row">
+                <td colspan="5">
+                    <div>
+                        <img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg" alt="Event 2 Large">
+                        <p>This is a description of Event 2. It's a fun event full of engaging workshops and entertainment.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
     </section>
 
-    <section class="shop snap-section" id="shop" style="padding-top:100px; background-color:white;">
-        <h2 style="color:black">Shop</h2>
+    <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; background-color: rgba(32, 56, 65, 1)">
+    
+    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to bottom, rgba(19, 45, 35, 1) 0%, rgba(32, 56, 65, 1) 100%);"> </div>
+    
+    
+         <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
+  <span style="color:#E4E2EB !important">Shop</span>
+  <span style="color:#AFA8C3 ">and Support us</span>
+</p>
+
+<p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.3em; line-height:1.4em; margin-left:15px; margin-top: 30px;">
+       We believe in supporting music in all its forms, which is why we offer our exclusive mixes on Bandcamp and in physical Vinyls. <br><br> By supporting our vinyl releases you're backing an independent label, helping us stay true to our roots.
+        <br>
+        <a href="https://resonatemag.com/interview-bad-bitch-dubz/" target="_blank" style="text-decoration:none; color: #F1F0F5 !important; margin-top:5px;"> 
+    <span style="font-size:0.8em !important; line-height:3em; text-decoration: underline;">Bandcamp</span> 
+    <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="22" style="filter: invert(1); position: relative; top: 6.5px;">
+</a>
+
+    </p>
         <div class="products">
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61-OgVR4TsL._UF894,1000_QL80_.jpg" alt="Product">
-                <h3>Vinyl 1</h3>
-                <p class="price">£9.99</p>
-                <a href="#" class="btn">Add to Cart</a>
+            <div class="product" style="padding-bottom:40px;" >
+                <img src="https://f4.bcbits.com/img/a3935242977_16.jpg" style="width:90%" alt="Product">
+                <h3>BBD001 - £20</h3>
+               
+                <a href="#" class="btn" style="padding:5px 9px; font-size:1.3em;">View</a>
             </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61-OgVR4TsL._UF894,1000_QL80_.jpg" alt="Product">
-                <h3>Vinyl 2</h3>
-                <p class="price">£20.00</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-            <div class="product">
-                               <img src="https://m.media-amazon.com/images/I/61-OgVR4TsL._UF894,1000_QL80_.jpg" alt="Product">
-                <h3>Vinyl 3</h3>
-                <p class="price">£99.99</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
+           
         </div>
     </section>
 
-    <footer class="snap-section" style="background-color:white; margin-top:0; color: black">
-        <p>© 2025 BBD. All rights reserved.</p>
+    <footer class="snap-section" style="mix-height:70px; padding:0; background-color: rgba(27, 26, 36, 1); margin-top:0; color: white">
+    
+    <div style="position:relative; height:60px; padding:0px; margin-top:-20px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(32, 56, 65, 1) 100%);"> </div>
+        <p style="padding-bottom:30px;" >© 2025 BBD. All rights reserved.</p>
     </footer>
 <script>
         const menuToggle = document.querySelector('.menu-toggle');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownMenu = document.querySelector('.dropdown-menu'); 
         const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
         const navLinks = document.querySelectorAll('header nav a');
       //  const video = document.getElementById('landing-video');
@@ -1060,6 +1186,21 @@ navLinks.forEach(link => {
     }
 
 });
+      
+    // Get all the rows with the class "event-row" and add a click event listener
+    document.querySelectorAll('.expand-row').forEach(function (expandRow) {
+        expandRow.addEventListener('click', function () {
+            const expandedRow = this.closest('tr').nextElementSibling;
+            const arrow = this.querySelector('.down-arrow');
+
+            // Toggle the expanded row visibility
+            expandedRow.style.display = expandedRow.style.display === 'table-row' ? 'none' : 'table-row';
+
+            // Rotate the arrow when clicked
+            this.closest('tr').classList.toggle('expanded');
+        });
+    });
+
 
     </script>
 </body>
