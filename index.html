@@ -11,19 +11,29 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Existing CSS - keep this */
+
+
+        @font-face {
+    font-family: 'Adieu Light';
+    src: url('../fonts/Adieu-Light.a145d823.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+           font-family: 'Adieu Light', sans-serif;
         }
 
         html,
         body {
             line-height: 1.6;
             color: #fff;
-            background-color: black;
+            background-color: rgba(27, 26, 36, 1);
             scroll-behavior: smooth;
+             font-family: 'Adieu Light', sans-serif;
             /* Enable smooth scrolling */
 
         }
@@ -42,13 +52,13 @@
 
         /* Add a class to the body when scrolled past the landing section */
         body.scrolled {
-            background-color: white;
+            background-color: rgba(27, 26, 36, 1);
             color: black;
             /* Ensure default text color is black when scrolled */
         }
 
         header {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%); 
+            background: linear-gradient(to bottom, rgba(27, 26, 36, 1) 0%, rgba(27, 26, 36, 0.5) 60%, rgba(27, 26, 36, 0) 100%); 
             color: #fff;
             padding: 1rem 2rem;
             display: flex;
@@ -641,13 +651,13 @@
 
         <div class="landing-content">
             <div
-                style="position:relative; height:auto; align-items: end; padding:20px; padding-top:90px; background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+                style="position:relative; height:auto; align-items: end; padding:20px; padding-top:90px; background: linear-gradient(to top, rgba(30, 43, 74, 1) 0%, rgba(27, 26, 36, 0.8) 40%, rgba(27, 26, 36, 0) 100%);
 ">
               <!--  <div class="unmute-button-container">
                     <button id="unmute-button" class="unmute-button">
                         <img id="unmute-icon" src="https://img.icons8.com/ios/50/FFFFFF/mute--v1.png" alt="Unmute">
                     </button>
-                </div> -->
+                </div> --> 
                 <p style="line-height:1.2em">Female and non-binary DJ collective on a mission to dismantle the
                     industry’s
                     gender
@@ -661,31 +671,31 @@
         </div>
     </section>
 
-    <section class="about snap-section" id="about" style="padding-top:0px; background-color:#605187">
-     <div style="position:relative; height:80px; padding:0px; margin-top:-32px; background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);"> </div>
+    <section class="about snap-section" id="about" style="padding-top:0px; background-color:rgba(30, 43, 74, 1)">
+     <div style="position:relative; height:80px; padding:0px; margin-top:-32px; background: linear-gradient(to bottom, rgba(30, 43, 74, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
      
        
      
                     <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
-  <span style="color:#E4E2EB !important;">Brea⚡︎king boundaries</span>
-  <span style="color:#AFA8C3;"> in the Bristol music scene since 2023.</span>
+  <span style="color:#E4E2EB !important">Brea⚡︎king boundaries</span>
+  <span style="color:#AFA8C3 "> in the Bristol music scene since 2023.</span>
 </p>
 
                     
                     <div style="display: flex; align-items: center; padding-left:1em; padding-right:1em; margin-bottom: 1em;">
-    <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" style="margin-right: 0em; margin-left:0px; overflow: hidden; width:100%">
+    <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" style="margin-right: 0em; margin-left:0px; overflow: hidden; width:100%; ">
    
 </div>
 
 
 
-<div style="display: flex; align-items: center; padding-left:1em; padding-right:1em; margin-top: 1em; padding-bottom:30px;">
+<div style="display: flex; align-items: center; padding-left:1em; padding-right:1em; margin-top: 1em; padding-bottom:60px;">
     <p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1;">
         We're more than just a collective. We are a platform for rising talent, networking events and mix sessions that uplift the next generation of artists. 
         <br>
         <a href="https://resonatemag.com/interview-bad-bitch-dubz/" target="_blank" style="text-decoration:none; color: #F1F0F5 !important; margin-top:5px;"> 
             <u>Read more</u> 
-            <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="22" style="filter: invert(1); position: relative; top: 6.5px;">
+            <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="22" style="filter: invert(1); position: relative; top: 6.5px; ">
         </a>
     </p>
     
@@ -696,72 +706,119 @@
   
     </section>
 
-    <section class="team snap-section" id="team" style=" background-color:#87515D; padding-top:0">
+    <section class="team snap-section" id="team" style=" background-color:rgba(27, 26, 36, 1); padding-top:0">
+    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
     
-        <h2 style="border-top: solid 4px black; border-bottom: solid 4px black; background-color: white; color: black !important; margin-top: -32px; white-space: nowrap; overflow: hidden; text-align: center; font-size: 30px; padding-bottom:5px; padding-top:5px;">
-  RESIDENTS RESIDENTS RESIDENTS 
+    
+        <h2 style="color: white !important; margin-top: -2px; white-space: nowrap; overflow: hidden; text-align: left; font-size: 40px; margin-left:15px; padding-top:5px;">
+  Residents
 </h2>
 
         
-         <p class="rast" style=" padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
+         <p class="rast" style=" padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-bottom:40px;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
         <div class="team-members">
         
             <div class="team-member" style="position: relative; display: inline-block;">
-    <img src="https://stepzach.github.io/BBD/Photo%2008.02.2025,%2018%2046%2010%20(6).jpg" alt="Team Member" style="display: block; width: 100%; position:relative; right:16px; overflow:hidden;">
+   <img 
+  src="https://stepzach.github.io/BBD/Photo%2008.02.2025,%2018%2046%2010%20(6).jpg" 
+  alt="Team Member" 
+  style="
+    display: block; 
+    width: 100%; 
+    position: relative; 
+    right: 26px; 
+    overflow: hidden; 
+    -webkit-mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+  "
+>
+
+
+
     
     <!-- Overlay text -->
-    <div style="position: absolute; bottom: 90px; right: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div style="position: absolute; bottom: 130px; right: 20px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_01
+        <i class="fab fa-instagram" style="position:relative; font-size:17px; top:2px; margin-right:5px; color: #AFA8C3"></i> @username_01
       
     </div> 
 
-    <h3 style="text-align: left; color: white !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: left; color: white !important; margin-top:-5px;">Description / Role</p>
+    <h3 style="text-align: left; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: left; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
 
   <div class="team-member" style="position: relative; display: inline-block;">
-    <img src="https://github.com/Stepzach/BBD/blob/main/Photo%2008.02.2025,%2018%2046%2010%20(9).jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; left:16px; overflow:hidden;">
+    <img src="https://github.com/Stepzach/BBD/blob/main/Photo%2008.02.2025,%2018%2046%2010%20(9).jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; left:26px; overflow:hidden; -webkit-mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+  ">
     
     <!-- Overlay text -->
-    <div style="position: absolute; bottom: 90px; left: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div style="position: absolute; bottom: 130px; left: 20px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_02 
+        <i class="fab fa-instagram" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_02 
       
     </div>
 
-    <h3 style="text-align: right; color: white !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: right; color: white !important; margin-top:-5px;">Description / Role</p>
+    <h3 style="text-align: right; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: right; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
   <div class="team-member" style="position: relative; display: inline-block;">
-    <img src="https://github.com/Stepzach/BBD/blob/main/IMG_4303.jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; right:16px; overflow:hidden;">
+    <img src="https://github.com/Stepzach/BBD/blob/main/IMG_4303.jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; right:26px; overflow:hidden; -webkit-mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+  ">
     
     <!-- Overlay text -->
-    <div style="position: absolute; bottom: 90px; right: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div style="position: absolute; bottom: 130px; right: 20px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_03
+        <i class="fab fa-instagram" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_03
       
     </div> 
 
-    <h3 style="text-align: left; color: white !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: left; color: white !important; margin-top:-5px;">Description / Role</p>
+    <h3 style="text-align: left; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: left; color: #AFA8C3  !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
 
   <div class="team-member" style="position: relative; display: inline-block;">
-    <img src="https://github.com/Stepzach/BBD/blob/main/R1-08748-0004.jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; left:16px; overflow:hidden;">
+    <img src="https://github.com/Stepzach/BBD/blob/main/R1-08748-0004.jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; left:26px; overflow:hidden; -webkit-mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: 
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+  ">
     
     <!-- Overlay text -->
-    <div style="position: absolute; bottom: 90px; left: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div style="position: absolute; bottom: 90px; left: 20px;  color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_04
+        <i class="fab fa-instagram" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_04
       
     </div>
 
-    <h3 style="text-align: right; color: white !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: right; color: white !important; margin-top:-5px;">Description / Role</p>
+    <h3 style="text-align: right; color: #E4E2EB !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: right; color: #AFA8C3  !important; margin-top:-5px;">Description / Role</p>
 </div>
 
 
