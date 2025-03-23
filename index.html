@@ -78,10 +78,7 @@
         }
 
         /* Add a class to the header when scrolled past the landing section */
-        header.scrolled {
-            background: transparent;
-            color: black;
-        }
+        
 
         header nav a {
             color: #fff;
@@ -92,9 +89,7 @@
         }
 
         /* Change navigation links color when scrolled */
-        header.scrolled nav a {
-            color: black;
-        }
+       
 
         header nav a:hover {
             color: #f39c12;
@@ -303,10 +298,7 @@
         }
 
         /* Change dropdown menu links color when scrolled */
-        body.scrolled .dropdown-menu a {
-            color: black;
-            border-bottom: solid 1px white;
-        }
+       
 
 
 
@@ -358,14 +350,11 @@
                 order: 4;
                 /* Push to the right */
                 font-size: 2em;
-                color: white;
+                color: white !important;
             }
 
             /* Style the instagram logo WHEN SCROLLED*/
-            body.scrolled .instagram-logo {
-                color: white !important;
-
-            }
+           
 
             .landing video {
                 top: 0;
@@ -399,15 +388,11 @@
 
         h2 {
 
-            color: black;
+            color: white;
 
         }
 
-        h2.scrolled {
-
-            color: black;
-
-        }
+       
 
 
         /* General style for the instagram logo */
@@ -418,9 +403,9 @@
         }
 
         /* General style for the instagram logo */
-        header.scrolled .instagram-logo {
-            color: black;
-            font-size: 34px;
+        header.scrolled {
+            color: white;
+            
             /* Adjust size as needed */
         }
 
@@ -453,7 +438,7 @@
         .unmute-button-container {
             position: absolute;
             top: 36px;
-            /* Positioned at the top of its container *
+            /* Positioned at the top of its container * 
             right: 20px;
             display: flex;
             justify-content: flex-end;
@@ -598,7 +583,10 @@
          
         
         
-
+ @media (max-width: 769px) {
+   
+   
+   
         body.scrolled .lgomob {
             width: 70px !important; /* Override inline style when scrolled */
         }
@@ -607,16 +595,41 @@
         body.scrolled .instagram-logo {
             margin-top: -20px !important; /* Override inline styles */
         }
+        
+        }
+        
+        
+        @media (min-width: 770px) {
+    
+   
+   
+        .lgomob { 
+            width: 130px;
+             margin-top: -3px !important; 
+        }
+     .instagram-logo {
+            margin-top: -38px !important; /* Override inline styles */
+        }
+       
+        
+        }
     </style>
 </head>
-
+ 
 <body>
     <header> 
         <div class="menu-toggle" style="margin-top:-70px;">
             <i class="fas fa-bars"></i>
         </div>
-         <a href="#home" class="lgomob"><img class="lgomob" src="https://stepzach.github.io/BBD/5. no outline through text.png" width=130px href="#"></a>
-        <nav style="margin-top:-70px;">
+         <a href="#home" class="lgomob"><img class="lgomob" src="https://stepzach.github.io/BBD/5. no outline through text.png" width=130px href="#">
+         
+         
+         
+         
+         
+         
+         </a>
+        <nav style="margin-top:-40px;">
             <a href="#about">About</a>
             <a href="#team">Residents</a>
             <a href="#events">Events</a>
@@ -712,7 +725,7 @@
   
     </section>
 
-    <section class="team snap-section" id="team" data-offset="90" style=" background-color:rgba(27, 26, 36, 1); padding-top:0; ">
+    <section class="team snap-section" id="team" data-offset="90" style=" padding-left:0; padding-right:0; background-color:rgba(27, 26, 36, 1); padding-top:0; ">
     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
     
     
@@ -721,7 +734,7 @@
 </h2>
 
         
-         <p class="rast" style="  font-size:1.3em; line-height:1.4em; font-family: Montserrat; padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-bottom:40px;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
+         <p class="rast" style="  font-size:1.3em; line-height:1.4em; font-family: Montserrat; padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-right: 15px; margin-bottom:40px;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
         <div class="team-members" style="overflow: hidden !important;">
         
             <div class="team-member" style="position: relative; display: inline-block; ">
@@ -833,7 +846,7 @@
         </div>
     </section>
 
-    <section class="events snap-section" id="events" data-offset="100" style="padding-top:100px; background-color:rgba(19, 45, 35, 1);">
+    <section class="events snap-section" id="events" data-offset="100" style="padding-left:0; padding-right:0; padding-top:100px; background-color:rgba(19, 45, 35, 1);">
      <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(19, 45, 35, 1) 0%, rgba(27, 26, 36, 1) 100%);"> </div>
      
      
@@ -969,17 +982,17 @@
 
     </section>
 
-    <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; background-color: rgba(32, 56, 65, 1)">
+    <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; padding-left:0; padding-right:0; background-color: rgba(32, 56, 65, 1)">
     
     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to bottom, rgba(19, 45, 35, 1) 0%, rgba(32, 56, 65, 1) 100%);"> </div>
     
     
          <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
   <span style="color:#E4E2EB !important">Shop</span>
-  <span style="color:#AFA8C3 ">and Support us</span>
+  <span style="color:#AFA8C3 ">and Support us</span> 
 </p>
 
-<p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.3em; line-height:1.4em; margin-left:15px; margin-top: 30px;">
+<p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.3em; line-height:1.4em; margin-left:15px; margin-top: 30px; margin-right: 15px; ">
        We believe in supporting music in all its forms, which is why we offer our exclusive mixes on Bandcamp and in physical Vinyls. <br><br> By supporting our vinyl releases you're backing an independent label, helping us stay true to our roots.
         <br>
         <a href="https://resonatemag.com/interview-bad-bitch-dubz/" target="_blank" style="text-decoration:none; color: #F1F0F5 !important; margin-top:5px;"> 
