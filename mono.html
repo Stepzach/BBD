@@ -12,8 +12,19 @@
     <style>
     
        @font-face {
-    font-family: 'Adieu Light';
-    src: url('https://github.com/Stepzach/BBD/blob/main/Adieu-Light.a145d823.otf') format('opentype');
+    font-family: "Adieu Light";
+    src: url("https://db.onlinewebfonts.com/t/a44ba55f82bbe3403e7b7661489068a8.eot");
+    src: url("https://db.onlinewebfonts.com/t/a44ba55f82bbe3403e7b7661489068a8.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a44ba55f82bbe3403e7b7661489068a8.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a44ba55f82bbe3403e7b7661489068a8.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a44ba55f82bbe3403e7b7661489068a8.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a44ba55f82bbe3403e7b7661489068a8.svg#Allotrope W05 Compressed XBold")format("svg");
+}
+
+
+ @font-face {
+    font-family: 'intro';
+  src: url('Amsi Pro AKS Condensed W03 Ultra Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,7 +34,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-             font-family:  Montserrat;;
+             font-family:  Adieu Light;
            
    
     
@@ -83,7 +94,7 @@
         header nav a {
             color: #fff;
             margin-left: 1.5rem;
-            font-size: 1.6em;
+            font-size: 2.6em;
             text-decoration: none;
             transition: 0.3s;
         }
@@ -246,7 +257,7 @@
         .menu-toggle {
             display: none;
             cursor: pointer;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #fff;
             transition: transform 0.4s ease;
             /*  For icon animation */
@@ -257,7 +268,7 @@
 
         }
 
-        .menu-toggle.active { 
+        .menu-toggle.active {
             transform: rotate(90deg);
             /* Rotate the icon when active */
         }
@@ -266,7 +277,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            background: rgba(48, 84, 162, 1);
+            background: rgba(102, 78, 255, 1);
             width: 100%;
             text-align: center;
             overflow: hidden;
@@ -280,8 +291,8 @@
 
         .dropdown-menu a {
             display: block;
-            padding: 1rem;
-            font-size: 2em;
+            padding: 0.3rem;
+            font-size: 3em;
             color: #fff;
             text-decoration: none;
             transition: 0.3s;
@@ -328,6 +339,7 @@
             .menu-toggle {
                 display: block;
                 order: 1;
+                 margin-left:10px;
                 /* Push to the left */
             }
 
@@ -349,8 +361,9 @@
             .instagram-logo {
                 order: 4;
                 /* Push to the right */
-                font-size: 2em;
+                font-size: 2.5em;
                 color: white !important;
+                margin-right:10px;
             }
 
             /* Style the instagram logo WHEN SCROLLED*/
@@ -398,14 +411,13 @@
         /* General style for the instagram logo */
         .instagram-logo {
             color: white;
-            font-size: 34px;
+            font-size: 2.5em;
             /* Adjust size as needed */
         }
 
         /* General style for the instagram logo */
         header.scrolled {
             color: white;
-            background: linear-gradient(to bottom, rgba(48, 84, 162, 1) 0%, rgba(48, 84, 162, 0.5) 30%, rgba(27, 26, 36, 0) 100%); 
             
             /* Adjust size as needed */
         }
@@ -497,7 +509,7 @@
             /* Center horizontally */
             transform: translateX(-50%);
             /* Adjust for the width of the container */
-            bottom: 170px;
+            bottom: 180px;
             z-index: 2;
 
 
@@ -654,19 +666,19 @@
          
          </a>
         <nav style="margin-top:-40px;">
-            <a href="#about">About</a> 
-            <a href="#team">Residents</a>
-            <a href="#events">Events</a>
-            <a href="#shop">Shop</a>
+            <a href="#about">ABOUT</a> 
+            <a href="#team">RESIDENTS</a>
+            <a href="#events">EVENTS</a>
+            <a href="#shop">SHOP</a>
         </nav>
 
         <a href="#" class="instagram-logo" style="margin-top:-70px;"><i class="fab fa-instagram"></i></a>
 
         <div class="dropdown-menu">
-            <a href="#about" style="margin-top:150px; color: white !important; ">About</a>
-            <a href="#team" style="color: white !important; ">Residents</a>
-            <a href="#events" style="color: white !important; ">Events</a>
-            <a href="#shop" style="color: white !important; ">Shop</a>
+            <a href="#about" style="margin-top:150px; color: white !important; ">ABOUT</a>
+            <a href="#team" style="color: white !important; ">RESIDENTS</a>
+            <a href="#events" style="color: white !important; ">EVENTS</a>
+            <a href="#shop" style="color: white !important; ">SHOP</a>
             <div style=" width: 100%; display: flex; gap: 10px; align-items: center; justify-content: center;">
 
                 <a href="#" class="tiktok-logo" style="border-bottom: none; color: white !important; "><i
@@ -692,28 +704,25 @@
 
         <div class="landing-content">
             <div
-                style="position:relative; height:auto; align-items: end; padding:20px; padding-top:90px; background: linear-gradient(to top, rgba(48, 84, 162, 1) 0%, rgba(27, 26, 36, 0.4) 60%, rgba(27, 26, 36, 0) 100%);
+                style="position:relative; height:auto; align-items: end; padding:20px; padding-top:90px; background: linear-gradient(to top, rgba(30, 43, 74, 1) 0%, rgba(27, 26, 36, 0.8) 40%, rgba(27, 26, 36, 0) 100%);
 ">
               <!--  <div class="unmute-button-container">
                     <button id="unmute-button" class="unmute-button">
                         <img id="unmute-icon" src="https://img.icons8.com/ios/50/FFFFFF/mute--v1.png" alt="Unmute">
                     </button>
                 </div> -->
-                <p style="line-height:1.2em; font-size:1.4em">Female and non-binary DJ collective on a mission to dismantle the
-                    industry’s 
-                    gender
-                    barriers.</p>
+                <p style="line-height:1.2em; font-size: 1.5em; font-family: intro;">Female and non-binary DJ collective on a mission to dismantle the industry’s gender barriers.</p>
                 <div class="arrow-container">
                     <img class="bounce-arrow" id="scroll-arrow"
                         src="https://popupfilmresidency.org/wp-content/uploads/2019/05/white-down-arrow-png-2.png"
                         alt="Animated Arrow" style="cursor: pointer; opacity:0.7">
-                </div>  
+                </div> 
             </div> 
         </div>
     </section> 
 
-    <section class="about snap-section" id="about" style="padding-top:0px; background-color:rgba(48, 84, 162, 1)">
-     <div style="position:relative; height:80px; padding:0px; margin-top:-32px; background: linear-gradient(to bottom, rgba(48, 84, 162, 0.5) 0%, rgba(48, 84, 162, 1) 100%);"> </div>
+    <section class="about snap-section" id="about" style="padding-top:0px; background-color:rgba(30, 43, 74, 1)">
+     <div style="position:relative; height:80px; padding:0px; margin-top:-32px; background: linear-gradient(to bottom, rgba(30, 43, 74, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
      
        
       <div class="bbdresi">
@@ -731,18 +740,18 @@
 
 
 <div style="display: flex; align-items: center; padding-left:1em; padding-right:1em; margin-top: 1em; padding-bottom:60px;">
-    <p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.3em; line-height:1.4em;">
+    <p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.3em; line-height:1.4em; font-family: intro;">
         We're more than just a collective. We are a platform for rising talent, networking events and mix sessions that uplift the next generation of artists. 
         <br>
         <a href="https://resonatemag.com/interview-bad-bitch-dubz/" target="_blank" style="text-decoration:none; color: #F1F0F5 !important; margin-top:5px;"> 
-    <span style="font-size:0.8em !important; line-height:3em; text-decoration: underline;">Read more</span> 
+    <span style="font-size:0.8em !important; line-height:3em; text-decoration: underline; font-family: intro;">Read more</span> 
     <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="22" style="filter: invert(1); position: relative; top: 6.5px;">
 </a>
 
     </p>
     
     
-     
+    
 </div>
 
 </div>
@@ -751,20 +760,20 @@
   
     </section>
 
-    <section class="team snap-section" id="team" data-offset="90" style=" padding-left:0; padding-right:0; background-color:rgba(48, 84, 162, 1); padding-top:0; ">
-    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(48, 84, 162, 1) 0%, rgba(48, 84, 162, 1) 100%);"> </div>
+    <section class="team snap-section" id="team" data-offset="90" style=" padding-left:0; padding-right:0; background-color:rgba(27, 26, 36, 1); padding-top:0; ">
+    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
     
     <div class="bbdresi">
-        <h2 style="color: white !important; margin-top: -2px; white-space: nowrap; overflow: hidden; text-align: left; font-size: 40px; margin-left:15px; padding-top:5px; font-family: Montserrat;">
-  Residents
+        <h2 style="color: white !important; margin-top: -2px; white-space: nowrap; overflow: hidden; text-align: left; font-size: 4em; margin-left:15px; padding-top:5px;">
+  RESIDENTS
 </h2> 
 
         
-         <p class="rast" style="  font-size:1.3em; line-height:1.4em; font-family: Montserrat; padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-right: 15px; margin-bottom:40px;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
+         <p class="rast" style="  font-size:1.3em; line-height:1.4em; padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-right: 15px; margin-bottom:40px; font-family: intro;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
          </div>
         <div class="team-members" style="overflow: hidden !important;">
         
-            <div class="team-member" style="position: relative; display: inline-block;margin-bottom:40px; ">
+            <div class="team-member" style="position: relative; display: inline-block; ">
    <img 
   src="https://stepzach.github.io/BBD/Photo%2008.02.2025,%2018%2046%2010%20(6).jpg" 
   alt="Team Member" 
@@ -775,12 +784,11 @@
     right: 26px; 
     overflow: hidden !important;
     -webkit-mask-image: 
-     
-     
-      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-image: 
-     
-      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     -webkit-mask-composite: intersect;
     mask-composite: intersect;
   "
@@ -790,86 +798,83 @@
 
     
     <!-- Overlay text --> 
-   
-
-    <h3 style=" text-align: left;  color: white !important; line-height:1em; font-size: 35px; margin-top:15px; font-family: Montserrat; ">Resident Name</h3>
-    <p style=" font-family: Montserrat; text-align: left; color: #F5F0F1  !important; margin-top:-5px;">Description / Role</p>
-                  <div class="playatt" style=" color: #AFA8C3; font-size: 14px; text-align:left;">
+    <div class="playatt" style="position: absolute; bottom: 120px; right: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="color: #AFA8C3; font-size:20px; position:relative; top:2px"></i> @username_1
+        <i class="fab fa-instagram1" style="position:relative; font-size:17px; top:2px; margin-right:5px; color: #AFA8C3"></i> @username_1
       
     </div> 
+
+    <h3 style=" text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;  ">Resident Name</h3>
+    <p style=" text-align: left; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
 
-  <div class="team-member" style="position: relative; display: inline-block; margin-bottom:40px;">
+  <div class="team-member" style="position: relative; display: inline-block;">
     <img src="https://github.com/Stepzach/BBD/blob/main/Photo%2008.02.2025,%2018%2046%2010%20(9).jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; left:26px; overflow: hidden !important; -webkit-mask-image: 
-     
-      linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-image: 
-     
-      linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     -webkit-mask-composite: intersect;
     mask-composite: intersect;
   ">
     
     <!-- Overlay text -->
-    
-
-    <h3 style="text-align: right;  color: white !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: right; color: #F5F0F1  !important; margin-top:-5px;">Description / Role</p>
-        <div class="playatt" style=" color: #AFA8C3; font-size: 14px; text-align:right;">
+    <div class="playatt" style="position: absolute; bottom: 315px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="color: #AFA8C3; font-size:20px; position:relative; top:2px"></i> @username_2
+        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i>  @username_2
       
-    </div> 
+    </div>
+
+    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: right; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
-  <div class="team-member" style="position: relative; display: inline-block; margin-bottom:40px">
+  <div class="team-member" style="position: relative; display: inline-block;">
     <img src="https://github.com/Stepzach/BBD/blob/main/IMG_4303.jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; right:26px; overflow: hidden !important; -webkit-mask-image: 
-    
-      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-image: 
-     
-      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     -webkit-mask-composite: intersect;
     mask-composite: intersect;
   ">
     
     <!-- Overlay text -->
-   
-
-    <h3 style="text-align: left;  color: white !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: left; color: #F5F0F1   !important; margin-top:-5px;">Description / Role</p>
-        <div class="playatt" style=" color: #AFA8C3; font-size: 14px; text-align:left;">
+    <div class="playatt" style="position: absolute; bottom: 317px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="color: #AFA8C3; font-size:20px; position:relative; top:2px"></i> @username_3
+        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_03
+        
       
     </div> 
+
+    <h3 style="text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: left; color: #AFA8C3  !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
 </div>
 
 
-  <div class="team-member" style="position: relative; display: inline-block; padding-bottom:80px">
+  <div class="team-member" style="position: relative; display: inline-block;">
     <img src="https://github.com/Stepzach/BBD/blob/main/R1-08748-0004.jpg?raw=true" alt="Team Member" style="display: block; width: 100%; position:relative; left:26px; overflow: hidden !important; -webkit-mask-image: 
-      
-      linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-image: 
-     
-      linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
+      linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     -webkit-mask-composite: intersect;
     mask-composite: intersect;
   ">
     
     <!-- Overlay text -->
-    
-
-    <h3 style="text-align: right;  color: white !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: right; color: #F5F0F1  !important; margin-top:-5px;">Description / Role</p>
-    <div class="playatt" style=" color: #AFA8C3; font-size: 14px; text-align:right;">
+    <div class="playatt" style="position: absolute; bottom: 283px; left: 10px;  color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram" style="color: #AFA8C3; font-size:20px; position:relative; top:2px"></i> @username_4
+        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_04
       
-    </div> 
+    </div>
+
+    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
+    <p style="text-align: right; color: #AFA8C3  !important; margin-top:-5px; padding-bottom:80px">Description / Role</p>
 </div>
 
 
@@ -877,8 +882,16 @@
         </div>
     </section>
 
-    <section class="events snap-section" id="events" data-offset="100" style="padding-left:0; padding-right:0; padding-top:100px; background-color:rgba(48, 84, 162, 1);">
-     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(48, 84, 162, 1) 0%, rgba(48, 84, 162, 1) 100%);"> </div>
+    <section class="events snap-section" id="events" data-offset="100" 
+    
+    style="padding-top: 0px; background: url('https://lh3.googleusercontent.com/fife/ALs6j_HIjZUPcuvdlR-EgGqXt22wGEobpX5p7VZk3bOCdiFxfIBU7l07vhYKbg6NSRSzeD_bMxfXaX0uhXq6FpQTdD--xVjhL1OuMaK6TeykwSaR74pFvrehFz3rEn4hoz4087t-Ts8U6gFUIsO8avYB7xnNXuE3rBGY9YJ0agm2LvFoeVTyLKwZNmUB_FyGDeHoeNDiM9OXyDOW3dVraL8NmrRdGXbh9JWJWdhdIzDH7Ec_rVMEcXDwTvI-2owxmmWtKT830oYd7imwksX57HpYHN9_wMeq4s5rwzGZTdf8I7g8UUpF7xUksh-RIwhZ5U_h4wE5is4i_vqMTmX5rx5D5DCB3Z2BAzoi4qcCSm8tW48dFtzeXVWW4KvsRW4CYWmaAbvEJfnUjO1aXVRK7feMZ49H9OSPTE3L1xT_5T_beXSlpvb2Sv0TyNH8koIEf9GZgw7gK-IAAqmKjkIDnjDTEKiPTUYPqSBmEavzI2ksbOtH1_QhQkAMdkcKJWFf0FIao0irdv_jQ6kV3i1jEUf_e7jqN2FnoDyWj2tsLpOVkuk2keeLLzG9bqe63kiqJdgMRRjpdy8UNav4kINy_xXHMC09d8G93cIn9zIgEIcsOf5MaWnlW2nfpuIR-TmOvdkgMlhLvvUPDO0XUKMpqposoQXawy8US25g1HY3eCI6ehAgJA3TlyhJIbKv00RUPzbQmVhyTJJ6nNiPPJjD1gph2L14istPRBhE3S6FpZ_5172lAeK1X0KG4yvMr_aLL2aWBBvI0Ffy5ZrWHLnQPTaI9mDsB5IfhP24JeUo27K-J2yY9yA3dvHEMvae-4fkcj_InMDFSEui40YO8wSmFyfplC9TtYuvQQ5OD9YySrJF2sqDk0iS5A47pA9ZFrC0JwVEz_hB25N_DKWW_sLPsZaQMNfms4lFMnMGRzo5qqG8CI2KcI58ZAKPG_EsiXpjRFBc4aLCfw-UXVAfAYOTuxdQGHpljM9Cxxv6P7e4HwssYBe-lP7Cex1qA0gO40ymoh1PHL5dkzWUilw60AfLUma4wA1wFuiRxd7IgQncyjI-v6J9OFtjU_Wje5WN1_yMKdxSlPUArmKcDxdgYgKYbbSIugDgPIY162vwUIU-5lkpjmZl4QN_L9s4BMyyzwVTSA1yS22hk9voWkMvCWCHneFMvq_RLRE7a2MWzz_Z5HS8vpV_bdHs2O4CKzYHJyuoO2A-XFsIfKwqw2I0DnmChZaEDQ7_nEpKfxFl31jlXqEthblqCcutyXPTBgcz5k1XVqTe2yMyXr-5bzge0o1RsFF7wYZFARFOlsFaP4blYssHhSfMsbTFo7ihf_f3-yCnNPdZZjAB2RnV_xUXSlkPi9MHOfNC20tGsQ0hxeg3iKsihLBnlgXTRy4qQh_GA3ckgIRBorRJ3IJpMqLX-2h8cJY3Kd90S9NewXagqbqktdQR2mc89EfCsRWg72imGWCnGgxRmUfXJaFPB_nT1giAV42yIcBHtUhnXXPKdIGztGqvYgt-RKAtokn7dvzDGonW8HzC0aEiA0mavJD_Z7Vby27rXYVwXbxeryIiCUWUNvW1t3xASW5_APB0w1Nx2dDBPLcfcsNhfyMQ6-q-8xj2bQ=w2940-h1664') no-repeat center center/cover;">
+
+    
+    
+    
+    
+    
+     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, #253f31 0%, rgba(27, 26, 36, 1) 100%);"> </div>
      
       <div class="bbdresi">
        <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
@@ -1013,10 +1026,10 @@
 
     </section>
 
-    <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; padding-left:0; padding-right:0; background-color: rgba(48, 84, 162, 1)">
+    <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; padding-left:0; padding-right:0; background-color: rgba(32, 56, 65, 1)">
     
     
-    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to bottom, rgba(48, 84, 162, 1) 0%, rgba(48, 84, 162, 1) 100%);"> </div> 
+    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to bottom, #3776ae 0%, rgba(32, 56, 65, 1) 100%);"> </div> 
     
      <div class="bbdresi">
          <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
@@ -1042,11 +1055,11 @@
             </div>
            </div>
         </div>
-    </section>  
+    </section>
 
-    <footer class="snap-section" style="mix-height:70px; padding:0; background-color: rgba(48, 84, 162, 1); margin-top:0; color: white">
+    <footer class="snap-section" style="mix-height:70px; padding:0; background-color: rgba(27, 26, 36, 1); margin-top:0; color: white">
     
-    <div style="position:relative; height:60px; padding:0px; margin-top:-20px; background: linear-gradient(to top, rgba(48, 84, 162, 1) 0%, rgba(48, 84, 162, 1) 100%);"> </div>
+    <div style="position:relative; height:60px; padding:0px; margin-top:-20px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(32, 56, 65, 1) 100%);"> </div>
         <p style="padding-bottom:30px;" >© 2025 BBD. All rights reserved.</p>
     </footer>
 <script>
