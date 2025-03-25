@@ -9,58 +9,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://use.typekit.net/ica4vtp.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ica4vtp.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ica4vtp.css">
     <style>
     
        @font-face {
-    font-family: 'Adieu Light';
-  src: url('Amsi Pro AKS Condensed W03 Ultra Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "allotrope-heavy", sans-serif;
+font-weight: 900;
+font-style: normal;
 }
 
+
+ @font-face {
+    font-family: "americane-condensed", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+@font-face {
+font-family: "roc-grotesk-compressed";
+font-weight: 400;
+font-style: normal;
+}
         /* Existing CSS - keep this */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-             font-family:  Adieu Light;
+             font-family:  allotrope-heavy;
            
    
     
         }
-
-        html,
-        body {
+ html, body {
             line-height: 1.6;
             color: #fff;
-            background-color: rgba(27, 26, 36, 1);
+            background:
+                linear-gradient(45deg, #1e2b87 0%, rgba(30,43,135,0) 70%),
+                linear-gradient(135deg, #5d618e 10%, rgba(93,97,142,0) 80%),
+                linear-gradient(225deg, #254286 10%, rgba(37,66,134,0) 80%),
+                linear-gradient(315deg, #3c4f87 100%, rgba(60,79,135,0) 70%);
+            background-blend-mode: overlay, normal;
+            
+            position: relative;
+            opacity: 1;
             scroll-behavior: smooth;
-            /* Enable smooth scrolling */
+            font-family: 'Adieu Light', sans-serif;  /* Make sure to have font loaded or a web safe fallback */
            
-                font-family: 'Adieu Light';
-
-        }
-
-        /* Add this CSS to prevent initial scrolling */
-        body {
-           overflow-x: hidden; /* Prevent horizontal scroll */
             height: 100vh;
-            /* Set body height to full viewport height */
-           
-            /* Hide scrollbars */
         }
 
-        body {
-            transition: background-color 0.0s ease;
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*  Use either a URL to your image OR a base64 encoded string */
+            /*  Option 1: URL (easiest if you have the image file) */
+            /* background-image: url("path/to/your/noise.png"); */
+
+            /*  Option 2: Base64 (if you want to embed the image) */
+            background-image: url("https://blog.roboflow.com/content/images/2020/03/movie-noise.jpg");
+            object-fit: contain;
+            background-repeat: repeat;  /*  Crucial: Make the image repeat */
+            opacity: 0.08; /* Adjust for desired noise level */
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 0; /* Behind other content */
         }
 
-        /* Add a class to the body when scrolled past the landing section */
-        body.scrolled {
-            background-color: rgba(27, 26, 36, 1);
-            color: black;
-            /* Ensure default text color is black when scrolled */
+     main {
+            position: relative; /* Create a stacking context */
+            z-index: 1; /* Place content above the noise */
+            
         }
-
         header {
             background: linear-gradient(to bottom, rgba(27, 26, 36, 1) 0%, rgba(27, 26, 36, 0.5) 60%, rgba(27, 26, 36, 0) 100%); 
             color: #fff;
@@ -280,8 +304,8 @@
 
         .dropdown-menu a {
             display: block;
-            padding: 1rem;
-            font-size: 2em;
+            padding: 0.3rem;
+            font-size: 3em;
             color: #fff;
             text-decoration: none;
             transition: 0.3s;
@@ -664,24 +688,24 @@
         <a href="#" class="instagram-logo" style="margin-top:-70px;"><i class="fab fa-instagram"></i></a>
 
         <div class="dropdown-menu">
-            <a href="#about" style="margin-top:150px; color: white !important; ">About</a>
-            <a href="#team" style="color: white !important; ">Residents</a>
-            <a href="#events" style="color: white !important; ">Events</a>
-            <a href="#shop" style="color: white !important; ">Shop</a>
+            <a href="#about" style="margin-top:150px; color: white !important; ">ABOUT</a>
+            <a href="#team" style="color: white !important; ">RESIDENTS</a>
+            <a href="#events" style="color: white !important; ">EVENTS</a>
+            <a href="#shop" style="color: white !important; ">SHOP</a>
             <div style=" width: 100%; display: flex; gap: 10px; align-items: center; justify-content: center;">
 
                 <a href="#" class="tiktok-logo" style="border-bottom: none; color: white !important; "><i
                         class="fab fa-tiktok"></i></a>
                 <a href="#" class="bandcamp-logo" style=" border-bottom: none; color: white !important; "><i
                         class="fab fa-bandcamp"></i></a>
-                <a href="#" class="soundcloud-logo" style=" border-bottom: none; color: white !important; "><i
-                        class="fab fa-soundcloud"></i></a>
+                <a href="#" class="soundcloud-logo" style=" border-bottom: none; color: white !important; "><i 
+                        class="fab fa-soundcloud"></i></a> 
             </div>
 
         </div>
     </header>
 
-
+ <main>
     <section class="landing snap-section" id="home" style="padding:0;">
        <!--  <video id="landing-video" autoplay loop muted playsinline>
             <source src="BOG x Super Sonic Booty Bangers： 2quid-2-2.mp4" type="video/mp4">
@@ -690,7 +714,7 @@
         
           <div class="image-slider">
             </div>
-
+ 
         <div class="landing-content">
             <div
                 style="position:relative; height:auto; align-items: end; padding:20px; padding-top:90px; background: linear-gradient(to top, rgba(30, 43, 74, 1) 0%, rgba(27, 26, 36, 0.8) 40%, rgba(27, 26, 36, 0) 100%);
@@ -700,10 +724,7 @@
                         <img id="unmute-icon" src="https://img.icons8.com/ios/50/FFFFFF/mute--v1.png" alt="Unmute">
                     </button>
                 </div> -->
-                <p style="line-height:1.2em; font-size: 1.8em;">Female and non-binary DJ collective on a mission to dismantle the
-                    industry’s 
-                    gender
-                    barriers.</p>
+                <p style="line-height:0.9em; font-size: 1.8em; font-family: americane-condensed;">Female and non-binary dj collective on a mission to dismantle the industry’s gender barriers.</p>
                 <div class="arrow-container">
                     <img class="bounce-arrow" id="scroll-arrow"
                         src="https://popupfilmresidency.org/wp-content/uploads/2019/05/white-down-arrow-png-2.png"
@@ -713,14 +734,14 @@
         </div>
     </section> 
 
-    <section class="about snap-section" id="about" style="padding-top:0px; background-color:rgba(30, 43, 74, 1)">
-     <div style="position:relative; height:80px; padding:0px; margin-top:-32px; background: linear-gradient(to bottom, rgba(30, 43, 74, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
+    <section class="about snap-section" id="about" style="padding-top:0px; ">
+     <div style="position:relative; height:80px; padding:0px; margin-top:-32px; background: linear-gradient(to top, rgba(30, 43, 74, 0) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
      
        
       <div class="bbdresi">
-                    <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
-  <span style="color:#E4E2EB !important">Brea⚡︎king boundaries</span>
-  <span style="color:#AFA8C3 "> in the Bristol music scene since 2023.</span>
+                    <p class="rast" style="font-size:50px; line-height:0.75em; text-align: left; margin-left: 15px;">
+  <span style="color:#E4E2EB !important">BREAKING BOUNDARIES</span> 
+  <span style="color:#AFA8C3 ">IN THE BRISTOL MUSIC SCENE SINCE 2023.</span>
 </p>
 
                     
@@ -732,14 +753,14 @@
 
 
 <div style="display: flex; align-items: center; padding-left:1em; padding-right:1em; margin-top: 1em; padding-bottom:60px;">
-    <p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.3em; line-height:1.4em;">
-        We're more than just a collective. We are a platform for rising talent, networking events and mix sessions that uplift the next generation of artists. 
-        <br>
+    <p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.8em; line-height:0.9em;font-family: americane-condensed;">
+        We're more than just a collective. We are a platform for rising talent, networking events and mix sessions that uplift the next generation of artists.  
+        <br> 
         <a href="https://resonatemag.com/interview-bad-bitch-dubz/" target="_blank" style="text-decoration:none; color: #F1F0F5 !important; margin-top:5px;"> 
-    <span style="font-size:0.8em !important; line-height:3em; text-decoration: underline;">Read more</span> 
-    <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="22" style="filter: invert(1); position: relative; top: 6.5px;">
+    <span style="font-size:1.1em !important; line-height:3em; text-decoration: underline; font-family: roc-grotesk-compressed !important;">Read more</span> 
+    <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="30" style="filter: invert(1); position: relative; top: 6.5px;">
 </a>
-
+ 
     </p>
     
     
@@ -750,20 +771,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
   
-    </section>
-
-    <section class="team snap-section" id="team" data-offset="90" style=" padding-left:0; padding-right:0; background-color:rgba(27, 26, 36, 1); padding-top:0; ">
-    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(30, 43, 74, 1) 100%);"> </div>
+    </section> 
+ 
+    <section class="team snap-section" id="team" data-offset="90" style=" padding-left:0; padding-right:0; padding-top:0; ">
+    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; "> </div>
     
     <div class="bbdresi">
-        <h2 style="color: white !important; margin-top: -2px; white-space: nowrap; overflow: hidden; text-align: left; font-size: 40px; margin-left:15px; padding-top:5px;">
-  Residents
+        <h2 style="color: white !important; margin-top: -2px; white-space: nowrap; overflow: hidden; text-align: left; font-size: 3em; margin-left:15px; padding-top:5px;">
+  RESIDENTS 
 </h2> 
 
         
-         <p class="rast" style="  font-size:1.3em; line-height:1.4em; padding-top:30px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-right: 15px; margin-bottom:40px;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p>
+         <p class="rast" style=" padding-top:10px;text-align: left; color: #F5F0F1 !important; margin-left: 15px; margin-right: 15px; margin-bottom:40px; line-height:0.9em; font-size: 1.8em; font-family: americane-condensed;">From hosting events and creating shared spaces to contributing their talents and ideas, our residents help shape the vibrant and welcoming atmosphere we’re proud of.</p> 
          </div>
-        <div class="team-members" style="overflow: hidden !important;">
+        <div class="team-members" style="overflow: hidden !important;"> 
         
             <div class="team-member" style="position: relative; display: inline-block; ">
    <img 
@@ -788,16 +809,16 @@
 
 
 
-    
-    <!-- Overlay text --> 
-    <div class="playatt" style="position: absolute; bottom: 120px; right: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
      
-        <i class="fab fa-instagram1" style="position:relative; font-size:17px; top:2px; margin-right:5px; color: #AFA8C3"></i> @username_1
+    <!-- Overlay text --> 
+    <div class="playatt" style="position: absolute; bottom: 150px; right: 20px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 20px; font-family: roc-grotesk-compressed !important;">
+     
+        <i class="fab fa-instagram" style="position:relative; font-size:18px; top:2px; margin-right:5px; color: #AFA8C3; "></i> username
       
     </div> 
 
-    <h3 style=" text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;  ">Resident Name</h3>
-    <p style=" text-align: left; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
+    <h3 style=" text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 30px; margin-top:15px;  ">RESIDENT NAME</h3>
+    <p style=" text-align: left; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px; font-family: roc-grotesk-compressed !important; font-size:1.8em !important;">Description / Role</p>
 </div>
 
 
@@ -813,14 +834,14 @@
   ">
     
     <!-- Overlay text -->
-    <div class="playatt" style="position: absolute; bottom: 315px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div class="playatt" style="position: absolute; bottom: 315px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 20px; font-family: roc-grotesk-compressed !important;">
      
-        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i>  @username_2
+        <i class="fab fa-instagram" id="playatt" style="color: #AFA8C3; position:relative; font-size:18px; top:2px; margin-right:5px; "></i>  username 
       
     </div>
 
-    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: right; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
+    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 30px; margin-top:15px;">RESIDENT NAME</h3>
+    <p style="text-align: right; color: #AFA8C3 !important; margin-top:-5px; margin-bottom:40px; font-family: roc-grotesk-compressed !important; font-size:1.8em !important;">Description / Role</p>
 </div>
 
   <div class="team-member" style="position: relative; display: inline-block;">
@@ -835,15 +856,15 @@
   ">
     
     <!-- Overlay text -->
-    <div class="playatt" style="position: absolute; bottom: 317px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div class="playatt" style="position: absolute; bottom: 317px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 20px; font-family: roc-grotesk-compressed !important;"> 
      
-        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_03
+        <i class="fab fa-instagram" id="playatt" style="color: #AFA8C3; position:relative; font-size:18px; top:2px; margin-right:5px; "></i> username
         
       
     </div> 
 
-    <h3 style="text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: left; color: #AFA8C3  !important; margin-top:-5px; margin-bottom:40px;">Description / Role</p>
+    <h3 style="text-align: left;  color: #AFA8C3 !important; line-height:1em; font-size: 30px; margin-top:15px;">RESIDENT NAME</h3>
+    <p style="text-align: left; color: #AFA8C3  !important; margin-top:-5px; margin-bottom:40px; font-family: roc-grotesk-compressed !important; font-size:1.8em !important;">Description / Role</p>
 </div>
 
 
@@ -859,14 +880,14 @@
   ">
     
     <!-- Overlay text -->
-    <div class="playatt" style="position: absolute; bottom: 283px; left: 10px;  color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 12px;">
+    <div class="playatt" style="position: absolute; bottom: 373px; left: 10px;  color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 20px; font-family: roc-grotesk-compressed !important;">
      
-        <i class="fab fa-instagram1" id="playatt" style="color: #AFA8C3; position:relative; font-size:17px; top:2px; margin-right:5px;"></i> @username_04
+        <i class="fab fa-instagram" id="playatt" style="color: #AFA8C3; position:relative; font-size:18px; top:2px; margin-right:5px;"></i> username
       
-    </div>
-
-    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 35px; margin-top:15px;">Resident Name</h3>
-    <p style="text-align: right; color: #AFA8C3  !important; margin-top:-5px; padding-bottom:80px">Description / Role</p>
+    </div> 
+ 
+    <h3 style="text-align: right;  color: #AFA8C3 !important; line-height:1em; font-size: 30px; margin-top:15px; ">RESIDENT NAME</h3>
+    <p style="text-align: right; color: #AFA8C3  !important; margin-top:-5px; padding-bottom:80px; font-family: roc-grotesk-compressed !important; font-size:1.8em !important;">Description / Role</p>
 </div>
 
 
@@ -876,19 +897,19 @@
 
     <section class="events snap-section" id="events" data-offset="100" 
     
-    style="padding-top: 0px; background: url('https://lh3.googleusercontent.com/fife/ALs6j_HIjZUPcuvdlR-EgGqXt22wGEobpX5p7VZk3bOCdiFxfIBU7l07vhYKbg6NSRSzeD_bMxfXaX0uhXq6FpQTdD--xVjhL1OuMaK6TeykwSaR74pFvrehFz3rEn4hoz4087t-Ts8U6gFUIsO8avYB7xnNXuE3rBGY9YJ0agm2LvFoeVTyLKwZNmUB_FyGDeHoeNDiM9OXyDOW3dVraL8NmrRdGXbh9JWJWdhdIzDH7Ec_rVMEcXDwTvI-2owxmmWtKT830oYd7imwksX57HpYHN9_wMeq4s5rwzGZTdf8I7g8UUpF7xUksh-RIwhZ5U_h4wE5is4i_vqMTmX5rx5D5DCB3Z2BAzoi4qcCSm8tW48dFtzeXVWW4KvsRW4CYWmaAbvEJfnUjO1aXVRK7feMZ49H9OSPTE3L1xT_5T_beXSlpvb2Sv0TyNH8koIEf9GZgw7gK-IAAqmKjkIDnjDTEKiPTUYPqSBmEavzI2ksbOtH1_QhQkAMdkcKJWFf0FIao0irdv_jQ6kV3i1jEUf_e7jqN2FnoDyWj2tsLpOVkuk2keeLLzG9bqe63kiqJdgMRRjpdy8UNav4kINy_xXHMC09d8G93cIn9zIgEIcsOf5MaWnlW2nfpuIR-TmOvdkgMlhLvvUPDO0XUKMpqposoQXawy8US25g1HY3eCI6ehAgJA3TlyhJIbKv00RUPzbQmVhyTJJ6nNiPPJjD1gph2L14istPRBhE3S6FpZ_5172lAeK1X0KG4yvMr_aLL2aWBBvI0Ffy5ZrWHLnQPTaI9mDsB5IfhP24JeUo27K-J2yY9yA3dvHEMvae-4fkcj_InMDFSEui40YO8wSmFyfplC9TtYuvQQ5OD9YySrJF2sqDk0iS5A47pA9ZFrC0JwVEz_hB25N_DKWW_sLPsZaQMNfms4lFMnMGRzo5qqG8CI2KcI58ZAKPG_EsiXpjRFBc4aLCfw-UXVAfAYOTuxdQGHpljM9Cxxv6P7e4HwssYBe-lP7Cex1qA0gO40ymoh1PHL5dkzWUilw60AfLUma4wA1wFuiRxd7IgQncyjI-v6J9OFtjU_Wje5WN1_yMKdxSlPUArmKcDxdgYgKYbbSIugDgPIY162vwUIU-5lkpjmZl4QN_L9s4BMyyzwVTSA1yS22hk9voWkMvCWCHneFMvq_RLRE7a2MWzz_Z5HS8vpV_bdHs2O4CKzYHJyuoO2A-XFsIfKwqw2I0DnmChZaEDQ7_nEpKfxFl31jlXqEthblqCcutyXPTBgcz5k1XVqTe2yMyXr-5bzge0o1RsFF7wYZFARFOlsFaP4blYssHhSfMsbTFo7ihf_f3-yCnNPdZZjAB2RnV_xUXSlkPi9MHOfNC20tGsQ0hxeg3iKsihLBnlgXTRy4qQh_GA3ckgIRBorRJ3IJpMqLX-2h8cJY3Kd90S9NewXagqbqktdQR2mc89EfCsRWg72imGWCnGgxRmUfXJaFPB_nT1giAV42yIcBHtUhnXXPKdIGztGqvYgt-RKAtokn7dvzDGonW8HzC0aEiA0mavJD_Z7Vby27rXYVwXbxeryIiCUWUNvW1t3xASW5_APB0w1Nx2dDBPLcfcsNhfyMQ6-q-8xj2bQ=w2940-h1664') no-repeat center center/cover;">
+    style="padding-top: 0px;">
 
     
     
     
     
     
-     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to top, #253f31 0%, rgba(27, 26, 36, 1) 100%);"> </div>
+     <div style="position:relative; height:80px; padding:0px; margin-top:-110px; "> </div>
      
       <div class="bbdresi">
-       <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
-  <span style="color:#E4E2EB !important">Upcoming Events</span>
-  <span style="color:#AFA8C3 ">in and around Bristol</span>
+       <p class="rast" style="font-size:50px; line-height:0.75em; text-align: left; margin-left: 15px;">
+  <span style="color:#E4E2EB !important">UPCOMING EVENTS</span>
+  <span style="color:#AFA8C3 ">IN AND AROUND BRISTOL</span>
 </p>
         
         
@@ -967,19 +988,19 @@
     <table>
         <thead>
             <tr>
-                <th>Date</th>
+                <th style="font-size:29px; font-family: americane-condensed;" >DATE</th>
                 <th></th>
-                <th>Location</th>
+                <th style="font-size:29px; font-family: americane-condensed;">LOCATION</th>
                 <th></th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr class="event-row">
-                <td>March 25th</td>
+                <td style="font-size:22px; line-height:1em; font-family: americane-condensed;">March 25th</td>
                 <td><img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg" alt="Event 1" width="80"></td>
-                <td>@Location</td>
-                <td><button class="buy-tickets-btn">Tickets</button></td>
+                <td style="font-size:20px; line-height:1em; font-family: americane-condensed;">Location</td>
+                <td><button class="buy-tickets-btn" style="font-family: roc-grotesk-compressed !important; font-size:1.8em !important;">Tickets</button></td>
                 <td class="expand-row">
                     <span class="down-arrow">▼</span>
                 </td>
@@ -994,10 +1015,10 @@
             </tr>
 
             <tr class="event-row">
-                <td>April 10th</td>
+                <td style="font-size:22px; line-height:1em; font-family: americane-condensed;">April 10th</td>
                 <td><img src="https://ugc.production.linktr.ee/828523fa-a453-419f-86ca-a2a63b716ec0_1080X1350-2-QUID-05.03.25.jpeg" alt="Event 2" width="80"></td>
-                <td>@Location</td>
-                <td><button class="buy-tickets-btn">Tickets</button></td>
+                <td style="font-size:20px; line-height:1em; font-family: americane-condensed;">Location</td>
+                <td><button class="buy-tickets-btn" style="font-family: roc-grotesk-compressed !important; font-size:1.8em !important;">Tickets</button></td>
                 <td class="expand-row">
                     <span class="down-arrow">▼</span>
                 </td>
@@ -1018,42 +1039,46 @@
 
     </section>
 
-    <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; padding-left:0; padding-right:0; background-color: rgba(32, 56, 65, 1)">
+    <section class="shop snap-section" id="shop" data-offset="100" style="padding-top:100px; padding-left:0; padding-right:0;">
     
     
-    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; background: linear-gradient(to bottom, #3776ae 0%, rgba(32, 56, 65, 1) 100%);"> </div> 
+    <div style="position:relative; height:80px; padding:0px; margin-top:-110px; "> </div> 
     
      <div class="bbdresi">
-         <p class="rast" style="font-size:50px; line-height:1em; text-align: left; margin-left: 15px;">
-  <span style="color:#E4E2EB !important">Shop</span>
-  <span style="color:#AFA8C3 ">and Support us</span> 
-</p>
+         <p class="rast" style="font-size:50px; line-height:0.75em; text-align: left; margin-left: 15px;">
+  <span style="color:#E4E2EB !important">SHOP</span>
+  <span style="color:#AFA8C3 ">AND SUPPORT US</span>  
+</p> 
 
-<p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; font-size:1.3em; line-height:1.4em; margin-left:15px; margin-top: 30px; margin-right: 15px; ">
-       We believe in supporting music in all its forms, which is why we offer our exclusive mixes on Bandcamp and in physical Vinyls. <br><br> By supporting our vinyl releases you're backing an independent label, helping us stay true to our roots.
+<p class="rast" style="text-align: left; color:white !important; margin: 0; flex: 1; line-height:0.9em; font-size: 1.8em; font-family: americane-condensed; margin-left:15px; margin-top: 30px; margin-right: 15px; ">
+       We believe in supporting music in all its forms, which is why we offer our exclusive mixes on Bandcamp and in physical Vinyls. <br><br> By supporting our vinyl releases you're backing an independent label, helping us stay true to our roots. 
         <br>
         <a href="https://resonatemag.com/interview-bad-bitch-dubz/" target="_blank" style="text-decoration:none; color: #F1F0F5 !important; margin-top:5px;"> 
-    <span style="font-size:0.8em !important; line-height:3em; text-decoration: underline;">Bandcamp</span> 
-    <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="22" style="filter: invert(1); position: relative; top: 6.5px;">
+    <span style=" font-family: roc-grotesk-compressed !important; font-size:1.1em !important; text-decoration: underline; line-height: 2.2em;">Bandcamp</span> 
+    <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="30" style="filter: invert(1); position: relative; top: 6.5px;">
 </a>
 
     </p>
         <div class="products">
             <div class="product" style="padding-bottom:40px;" >
                 <img src="https://f4.bcbits.com/img/a3935242977_16.jpg" style="width:90%; max-width:600px;" alt="Product" > 
-                <h3>BBD001 - £20</h3>  
+                <H3> 
+                <span style="font-size:2em; font-family: americane-condensed;">BBD001</span>
+                 <span style="font-size:2em; font-family: roc-grotesk-compressed !important; "> - 20</span>
+                </H3>
                
-                <a href="#" class="btn" style="padding:5px 9px; font-size:1.3em;">View</a>
+                <a href="#" class="btn" style="padding:5px 9px; font-family: roc-grotesk-compressed !important; font-size:1.8em !important;">View</a>
             </div>
            </div>
         </div>
     </section>
 
-    <footer class="snap-section" style="mix-height:70px; padding:0; background-color: rgba(27, 26, 36, 1); margin-top:0; color: white">
+    <footer class="snap-section" style="mix-height:70px; padding:0; background-color: transparent; margin-top:0; color: white">
     
-    <div style="position:relative; height:60px; padding:0px; margin-top:-20px; background: linear-gradient(to top, rgba(27, 26, 36, 1) 0%, rgba(32, 56, 65, 1) 100%);"> </div>
-        <p style="padding-bottom:30px;" >© 2025 BBD. All rights reserved.</p>
+    <div style="position:relative; height:60px; padding:0px; margin-top:-20px;"> </div>
+        <p style="padding-bottom:30px; font-family: roc-grotesk-compressed !important; font-size:1.8em !important;" >© 2025 BBD. All rights reserved.</p>
     </footer>
+     </main>
 <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const dropdownMenu = document.querySelector('.dropdown-menu'); 
