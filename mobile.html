@@ -339,7 +339,7 @@ font-style: normal;
                 /* Push to the left */
             }
 
-            .lgomob {
+            .body1111 {
                 order: 2;
                 /* Keep the logo in the center  */
                 margin: 0 auto;
@@ -598,12 +598,12 @@ font-style: normal;
    
    
    
-        body.scrolled .lgomob {
+        .body1111.scrolled .body1111 {
             width: 70px !important; /* Override inline style when scrolled */
         }
 
-        body.scrolled .menu-toggle,
-        body.scrolled .instagram-logo {
+        .body1111.scrolled .menu-toggle,
+        .body1111.scrolled .instagram-logo {
             margin-top: -20px !important; /* Override inline styles */
         }
         
@@ -614,7 +614,7 @@ font-style: normal;
     
    
    
-        .lgomob { 
+         .body1111 .body1111 { 
             width: 130px;
              margin-top: -3px !important; 
         }
@@ -655,7 +655,7 @@ font-style: normal;
         <div class="menu-toggle scrolled" style="margin-top:-70px;">
             <i class="fas fa-bars"></i>
         </div>
-         <a href="#home" class="lgomob"><img class="lgomob" src="https://stepzach.github.io/BBD/5. no outline through text.png" width="130px" href="#">
+         <a href="#home" class="body1111"><img class="body1111" src="https://stepzach.github.io/BBD/5. no outline through text (1).png" width="130px" href="#">
          
          
          
@@ -673,7 +673,7 @@ font-style: normal;
         <a href="#" class="instagram-logo" style="margin-top:-70px;"><i class="fab fa-instagram"></i></a>
 
         <div class="dropdown-menu">
-            <a href="#about" style="margin-top:115px; color: white !important; ">ABOUT</a>
+            <a href="#about" style="margin-top:130px; color: white !important; ">ABOUT</a>
             <a href="#team" style="color: white !important; ">RESIDENTS</a>
             <a href="#events" style="color: white !important; ">EVENTS</a>
             <a href="#shop" style="color: white !important; ">SHOP</a>
@@ -827,7 +827,7 @@ font-style: normal;
     <!-- Overlay text -->
     <div class="playatt" style="position: absolute; bottom: 315px; left: 10px; color: #AFA8C3; padding: 0px 5px; border-radius: 3px; font-size: 20px; font-family: roc-grotesk-compressed !important;">
      
-       
+        
       
     </div>
 
@@ -1124,6 +1124,9 @@ font-style: normal;
     </footer>
      </main>
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
         const menuToggle = document.querySelector('.menu-toggle');
         const dropdownMenu = document.querySelector('.dropdown-menu'); 
         const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
@@ -1134,6 +1137,7 @@ font-style: normal;
         const header = document.querySelector('header');
         const landing = document.querySelector('.landing');
         const body = document.querySelector('body');
+        const body1111 = document.querySelector('.body1111');
         const h2Elements = document.querySelectorAll('h2'); // Select ALL h2 elements
         const snapContainer = document.getElementById('snapContainer');
         const rast = document.querySelector('.rast');
@@ -1262,20 +1266,22 @@ navLinks.forEach(link => {
           
 
 
-            if (scrollPosition < 5) {
-            
-                body.classList.remove('scrolled');
+            if (scrollPosition < 10) {
+             body1111.classList.remove('scrolled');
                 header.classList.remove('scrolled');
                 menuToggle.classList.remove('scrolled');
                 rast.classList.remove('scrolled');
                 h2Elements.forEach(h2 => h2.classList.remove('scrolled'));
-
-            } else if (scrollPosition > 4) {
-                body.classList.add('scrolled');
+                
+               
+            } else if (scrollPosition > 9) {
+              
+                 body1111.classList.add('scrolled');
                 header.classList.add('scrolled');
                 menuToggle.classList.add('scrolled');
                 rast.classList.add('scrolled');
                 h2Elements.forEach(h2 => h2.classList.add('scrolled'));
+
 
             }
         }
@@ -1313,7 +1319,7 @@ navLinks.forEach(link => {
         });
     });
 
-
+});
     </script>
 
 
