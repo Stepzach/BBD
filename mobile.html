@@ -339,7 +339,7 @@ font-style: normal;
                 /* Push to the left */
             }
 
-            .body1111 {
+            .lgomob {
                 order: 2;
                 /* Keep the logo in the center  */
                 margin: 0 auto;
@@ -598,12 +598,12 @@ font-style: normal;
    
    
    
-        .body1111.scrolled .body1111 {
+        body.scrolled .lgomob {
             width: 70px !important; /* Override inline style when scrolled */
         }
 
-        .body1111.scrolled .menu-toggle,
-        .body1111.scrolled .instagram-logo {
+        body.scrolled .menu-toggle,
+        body.scrolled .instagram-logo {
             margin-top: -20px !important; /* Override inline styles */
         }
         
@@ -614,7 +614,7 @@ font-style: normal;
     
    
    
-         .body1111 .body1111 { 
+        .lgomob { 
             width: 130px;
              margin-top: -3px !important; 
         }
@@ -650,12 +650,12 @@ font-style: normal;
     </style>
 <style type="text/css">.styles-module_blinkingCursor__yugAC{color:inherit;font:inherit;left:3px;line-height:inherit;opacity:1;position:relative;top:0}.styles-module_blinking__9VXRT{animation-duration:.8s;animation-iteration-count:infinite;animation-name:styles-module_blink__rqfaf}@keyframes styles-module_blink__rqfaf{0%{opacity:1}to{opacity:0}}</style></head>
  
-<body style="isolation: isolate;" class="scrolled">
-    <header class="scrolled"> 
-        <div class="menu-toggle scrolled" style="margin-top:-70px;">
+<body style="isolation: isolate;" class="">
+    <header class=""> 
+        <div class="menu-toggle" style="margin-top:-70px;">
             <i class="fas fa-bars"></i>
         </div>
-         <a href="#home" class="body1111"><img class="body1111" src="https://stepzach.github.io/BBD/5. no outline through text (1).png" width="130px" href="#">
+         <a href="#home" class="lgomob"><img class="lgomob" src="https://stepzach.github.io/BBD/5. no outline through text (1).png" width="130px" href="#">
          
          
          
@@ -756,7 +756,7 @@ font-style: normal;
   
     </section> 
  
-    <section class="team snap-section" id="team" data-offset="40" style=" padding-left:0; padding-right:0; padding-top:0; ">
+    <section class="team snap-section" id="team" data-offset="50" style=" padding-left:0; padding-right:0; padding-top:0; ">
     
     
     
@@ -1137,7 +1137,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');
         const landing = document.querySelector('.landing');
         const body = document.querySelector('body');
-        const body1111 = document.querySelector('.body1111');
         const h2Elements = document.querySelectorAll('h2'); // Select ALL h2 elements
         const snapContainer = document.getElementById('snapContainer');
         const rast = document.querySelector('.rast');
@@ -1267,16 +1266,16 @@ navLinks.forEach(link => {
 
 
             if (scrollPosition < 10) {
-             body1111.classList.remove('scrolled');
+             body.classList.remove('scrolled');
                 header.classList.remove('scrolled');
                 menuToggle.classList.remove('scrolled');
                 rast.classList.remove('scrolled');
                 h2Elements.forEach(h2 => h2.classList.remove('scrolled'));
-                
+                 header.classList.add('scrolled');
                
             } else if (scrollPosition > 9) {
               
-                 body1111.classList.add('scrolled');
+                 body.classList.add('scrolled');
                 header.classList.add('scrolled');
                 menuToggle.classList.add('scrolled');
                 rast.classList.add('scrolled');
