@@ -44,7 +44,7 @@ font-style: normal;
     color: #fff;
     background-image: url('https://github.com/Stepzach/BBD/blob/main/IMG_0539.PNG?raw=true');
     background-repeat: repeat;  /* This will make the image repeat */
-    background-size: auto;  /* Adjusts the image size, can change to 'cover' or 'contain' based on your preference */
+    background-size: cover;  /* Adjusts the image size, can change to 'cover' or 'contain' based on your preference */
     background-position: center;  /* Keeps the image centered, you can adjust this as needed */
     
     position: relative;
@@ -78,6 +78,28 @@ font-style: normal;
 
             /* Add transition for smooth color change */
         }
+
+        @media (min-width: 769px) {
+ header {
+    position: absolute !important;
+    background: linear-gradient(to bottom, rgba(27, 26, 36, 1) 0%, rgba(27, 26, 36, 0.5) 60%, rgba(74, 83, 191, 0) 100%); 
+  }
+            .rast p {
+                text-align: center !important;
+                margin-left: 0px !important;
+                    margin-bottom: 15px;
+                    font-size: 70px !important;
+                 }
+
+            .about p {
+    max-width: 1000px;
+ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+            
+}
 
         /* Add a class to the header when scrolled past the landing section */
         
@@ -729,7 +751,7 @@ font-style: normal;
 
                     
                     <div style="display: flex; align-items: center; padding-left:1em; padding-right:1em; margin-bottom: 1em;">
-    <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" style="margin-right: 0em; margin-left:0px; overflow: hidden; width:100%; max-width:600px;"> 
+    <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" style="margin-right: 0em; margin-left:0px; overflow: hidden; width:100%; "> 
    
 </div>
 
