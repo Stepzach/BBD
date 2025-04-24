@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header and Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <header>
+    <!-- Header code from previous response here -->
+    <div class="header-container">
+        <div class="header-left">
+            <a href="#" class="social-logo"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-logo medium-up"><i class="fab fa-bandcamp"></i></a>
+            <a href="#" class="social-logo large-up"><i class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="header-center">
+            <a href="#" class="logo"><img src="https://stepzach.github.io/BBD/5.%20no%20outline%20through%20text%20(1).png" width=80px></a>
+        </div>
+
+        <div class="header-right">
+            <div class="contact-info" style=" text-align:right;">
+                <p class="contact-us">Contact Us</p>
+                <a href="mailto:info@example.com">info@example.com</a>
+            </div>
+            <button class="menu-button small-only" onclick="toggleNav()">
+                <i class="fa fa-bars"></i> <!-- Hamburger icon -->
+            </button>
+        </div>
+    </div>
+  </header>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="#">Shop</a></li>
+      <li class="lineline"><a>│</a></li>
+      <li><a href="#">Releases</a></li>
+       <li class="lineline"><a>│</a></li>
+      <li><a href="#">Events</a></li>
+       <li class="lineline"><a>│</a></li>
+      <li><a href="#">Residents</a></li>
+       <li class="lineline"><a>│</a></li>
+      <li><a href="#">About</a></li>
+       <li class="lineline"><a>│</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Your main content here -->
+    <h1 style="text-align:center; color:white;">BAD B!TCH DUBZ</h1>
+    <div class="vid-container">
+ <div class="intro-video">
+    <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ydtijp90yk.js" async type="module"></script><style>wistia-player[media-id='ydtijp90yk']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ydtijp90yk/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="ydtijp90yk" aspect="1.7777777777777777"></wistia-player>
+ </div>
+  </div>
+  <div class="main-container-container">
+  <div class="main-container-789">
+  <div class="image-wrapper-456">
+    <img src="https://lh3.google.com/u/0/d/1OofnaTS2MVZcex3cJCzgYyEq8dCjicGE=w2940-h1664-iv1?auditContext=prefetch" alt="Descriptive Alt Text">
+  </div>
+  <div class="text-area-123">
+    <h1>Your Heading</h1>
+    <p>This is the text that will appear to the right of the image. You can add more paragraphs or other content here.</p>
+    
+  </div>
+</div>
+</div>
+<div class="main-container-container">
+  <div class="main-container-RIGHT">
+    <div class="text-area-RIGHT">
+      <h1>Your Heading</h1>
+      <p>This is the text that will appear to the left of the image. You can add more paragraphs or other content here.</p>
+     
+    </div>
+    <div class="image-wrapper-RIGHT">
+      <img src="https://lh3.google.com/u/0/d/1Nly4XTdudnwWm4iixTFX1WjrdYwZjaYd=w2940-h1664-iv1?auditContext=prefetch" alt="Descriptive Alt Text">
+    </div>
+  </div>
+</div>
+  </main>
+
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+  </script> 
+
+</body>
+</html>
+<style>
+/* General Styles (applied to all screen sizes) */
+
+.main-container-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  /* Optional: Align items vertically if needed
+  align-items: center;
+  */
+}
+.main-container-789 {
+max-width:1200px;
+ margin-top: 20px;
+ margin-left:20px;
+ margin-right:20px;
+color: white;
+  display: flex; /* Use flexbox for horizontal layout */
+  align-items: start; /* Vertically center the image and text */
+  width: 100%; /* Take up the full width of the parent */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.image-wrapper-456 {
+border: solid 2px white;
+  width: 40%; /* Image container takes 40% of the width */
+  height: auto;
+  margin-right: 20px; /* Add some spacing between the image and text */
+
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.image-wrapper-456 img {
+  width: 100%; /* Image fills the container */
+ 
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+}
+
+.text-area-123 {
+  width: 60%; /* Text container takes the remaining 60% */
+  box-sizing: border-box;
+}
+
+.main-container-RIGHT {
+  max-width: 1200px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  display: flex; /* Use flexbox for horizontal layout */
+  align-items: start; /* Vertically align the image and text to the top */
+  width: 100%; /* Take up the full width of the parent */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  flex-direction: row; /*  Reverse the order of flex items to put the image on the right */
+}
+
+.image-wrapper-RIGHT {
+  border: solid 2px white;
+  width: 30%; /* Image container takes 40% of the width */
+  height: auto;
+  margin-left: 20px; /* Add some spacing between the image and text */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.image-wrapper-RIGHT img {
+  width: 100%; /* Image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+}
+
+.text-area-RIGHT {
+  width: 70%; /* Text container takes the remaining 60% */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: black;
+ 
+ }
+ .vid-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  /* Optional: Align items vertically if needed
+  align-items: center;
+  */
+}
+   .intro-video {
+   border: solid 2px white;
+   width:100%;
+   max-width:1200px;
+   max-height:500px;
+   margin-left:20px;
+    margin-right:20px;
+    overflow:hidden;
+   }
+   
+
+
+header {
+  background-color: black;
+  padding: 10px;
+   margin-left:20px;
+    margin-right:20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Distribute space evenly */
+  max-width: 1200px; /* Optional: Limit maximum width of header */
+  margin: 0 auto; /* Center the header container */
+}
+
+.header-left, .header-center, .header-right {
+  display: flex;
+  align-items: center;
+  
+}
+
+.social-logo {
+  font-size: 38px;
+  margin-right: 30px;
+  color: white; /* Example color */
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+   margin-left: -30px;
+  color: #007bff; /* Example color */
+  text-decoration: none;
+}
+
+.contact-info p {
+ font-size: 20px;
+  margin: 0;
+   color: white;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: white; /* Example color */
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  font-size: 34px;
+  color: white;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+/* Media Queries */
+
+/* Medium Screens (e.g., tablets) */
+@media (max-width: 768px) {
+
+
+
+  .header-container {
+    display: flex; /* Re-enable flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+  .header-left {
+    margin-right: 100px; /* Add some space between icons and logo */
+    justify-content: center;
+  }
+
+  .header-right {
+    display: none; /* Hide the contact info */
+  }
+
+    .medium-up {
+        display: none;
+    }
+     header  {
+    margin-left:10px;
+    margin-right:10px;
+    }
+}
+
+/* Small Screens (e.g., phones) */
+@media (max-width: 480px) {
+
+ .intro-video,
+ .main-container-789,
+ .main-container-RIGHT {
+   
+   margin-left:10px;
+    margin-right:10px !important;
+   }
+.social-logo {
+ 
+  margin-right: 0px;
+  
+}
+.logo {
+ 
+   margin-left: 10px;
+ 
+}
+
+ header {
+    margin-left:0px;
+    margin-right:0px;
+    border-bottom: solid 2px white;
+    padding-top :5px;
+     padding-bottom :5px;
+    
+    }
+    
+  .header-container {
+    flex-direction: row; /* Back to horizontal layout, but customized */
+  }
+
+  .header-left {
+    justify-content: flex-start; /* Align to the left */
+     margin-right: 0px; 
+     margin-left:6px;
+   
+  }
+
+  .header-center {
+    flex-grow: 1; /* Allow logo to take up available space */
+    justify-content: center; /* Center the logo */
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+  }
+
+  .menu-button {
+    display: block; /* Show the menu button */
+    
+    margin-right:6px;
+  }
+
+  .contact-info {
+    display: none; /* Hide contact info */
+  }
+
+    .social-logo.large-up, .social-logo.medium-up {
+        display: none;
+    }
+}
+
+/* Utility Classes for visibility */
+.large-up {
+    display: inherit;
+}
+
+.medium-up {
+    display: inherit;
+}
+
+.small-only {
+    display: none;
+} 
+
+@media (max-width: 480px) {
+    .small-only {
+        display: inherit;
+    }
+}
+nav {
+
+border-top: solid 2px white;
+border-bottom: solid 2px white;
+  background-color: black;
+  color: white;
+  width:100%;
+}
+
+nav ul {
+  max-width: 1200px;
+  width:100%;
+  list-style: none;
+ margin: 0 auto;
+  padding: 0;
+  display: flex; /* Default: Show as a row */
+  justify-content: space-around !important;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Mobile Navigation Styles (Initially Hidden) */
+nav#main-nav {
+  position: fixed;
+  top: 0;
+  left: -80%;  /* Initially hidden off-screen */
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  color: white;
+  z-index: 1000; /* Ensure it's on top of other content */
+  overflow-y: auto; /* Allow scrolling if content is too long */
+  transition: left 0.3s ease-in-out; /* Animate the slide-in */
+}
+
+nav#main-nav.active {
+  left: 0; /* Slide the navigation into view */
+}
+
+nav#main-nav ul {
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align text to the left */
+  padding-top: 60px; /* Add space for the header above */
+}
+
+nav#main-nav ul li a {
+  padding: 15px;
+  font-size: 1.2em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separator lines */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Media Queries */
+
+/* Small Screens (e.g., phones) */
+@media (min-width: 481px) { /* changed max-width to min-width */
+  nav#main-nav {
+    display: block !important; /* Force show the nav */
+    position: static; /* Reset position to static */
+    width: auto; /* Reset width to auto */
+    height: auto; /* Reset height to auto */
+    background-color: transparent; /* Reset background color */
+    color: inherit; /* Reset text color */
+    left: auto;
+    transition: none;
+  }
+
+  nav#main-nav ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  nav#main-nav ul li a {
+    color: white;
+    padding: 10px 20px;
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+nav ul {
+  width:100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Default: Show as a row */
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 10px !important;
+  text-decoration: none;
+  color: white;
+
+}}
+@media (max-width: 510px) {
+
+nav ul li a {
+  display: block;
+  padding: 8px 5px !important;
+  text-decoration: none;
+  color: white;
+
+}}
+@media (max-width: 927px) {
+.lineline {
+display: none !important;
+}}
