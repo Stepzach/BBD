@@ -62,15 +62,17 @@
     <img src="https://resonatemag.com/wp-content/uploads/2024/04/5--scaled-e1713181654216.jpg" alt="Example Image">
   </div>
   <div class="text-container-ABOUT">
-    <h2>Some Heading</h2>
-    <p>This is some example text that will appear to the right of the image.  When the screen gets smaller, this text will collapse below the image. This is achieved using CSS media queries and flexbox.</p>
+    <h2 style="font-size:26px;">Some Heading</h2>
+    <p style="font-size:19px;">This is some example text that will appear to the right of the image.  When the screen gets smaller, this text will collapse below the image. This is achieved using CSS media queries and flexbox.</p>
     <p>More text can go here.</p>
   </div>
+  
 </div>
 
 
  
- 
+  <p style=" color:white; margin-left:20px; margin-right:20px; font-size: 19px;">This is some example text that will appear to the right of the image.  When the screen gets smaller, this text will collapse below the image. This is achieved using CSS media queries and flexbox.</p>
+    <p>More text can go here.</p>
  
  
   </main> 
@@ -147,7 +149,6 @@
   display: block;
 }
 
-
   .image-container-ABOUT {
     margin-right: auto;
     margin-left: auto;
@@ -161,6 +162,32 @@
 }
 }
 
+@media (min-width: 641px) {
+.text-container-ABOUT h2 {
+margin-top:0px !important;
+padding-top:0px !important;
+ }
+  }
+  
+  
+  @media (min-width: 790px) {
+.text-container-ABOUT h2 {
+font-size: 32px !important;
+ }
+  }
+  
+  @media (min-width: 900px) {
+.text-container-ABOUT h2 {
+font-size: 36px !important;
+ }
+  }
+  
+   @media (min-width: 900px) {
+.image-container-ABOUT img  {
+width:600px;
+ }
+  }
+  
 *, *::before, *::after {  /* Apply box-sizing to ALL elements */
     box-sizing: border-box;
 }
