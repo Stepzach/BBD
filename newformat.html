@@ -176,10 +176,9 @@ body {
  }
  .vid-container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  /* Optional: Align items vertically if needed
-  align-items: center;
-  */
+  justify-content: center; 
+  
+  align-items: center; 
 }
    .intro-video {
    border: solid 2px white;
@@ -479,7 +478,7 @@ nav ul li a {
 }}
 @media (max-width: 510px) {
 
-nav ul li a {
+nav ul li a { 
   display: block;
   padding: 8px 5px !important;
   text-decoration: none;
@@ -490,3 +489,17 @@ nav ul li a {
 .lineline {
 display: none !important;
 }}
+
+@media (max-width: 984px) {
+ .intro-video {
+   
+   max-height:400px;
+  
+   }}
+   
+   @media (max-width: 731px) {
+ .intro-video {
+   
+   max-height:350px;
+  
+   }}
