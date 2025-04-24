@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Header and Navigation</title>
     <link rel="stylesheet" href="style.css">
@@ -27,9 +27,9 @@
                 <p class="contact-us">CONTACT US</p>
                 <a href="mailto:info@example.com" style=" font-family: 'CoolveticaRG';">BBDUBZOFFICIAL@GMAIL.COM</a>
             </div>
-            <button class="menu-button small-only" onclick="toggleNav()">
-                <i class="fa fa-bars"></i> <!-- Hamburger icon -->
-            </button>
+           <button class="menu-button small-only" onclick="toggleNav(this)">
+  <i class="fa fa-bars"></i>
+</button>
         </div>
     </div>
   </header>
@@ -48,6 +48,7 @@
        <li class="lineline"><a>│</a></li>
       <li><a href="#">CONTACT</a></li>
     </ul>
+    <img class="small-only" src="https://lh3.googleusercontent.com/fife/ALs6j_GkJRD98D2nV8mOigTptBVwpwXKLUwSkO1glfFwW4TzzB2V3u1NoW24tDko7kbu1gDk4P-fMXflqxd_mXGyXPMyy-A5BzUaA1I-R_frWussYSx_iIm_ojVt4sygUdw0msEUzgzh4LrDCOX0L2j67jveINCvvEHHXIMNBy53THHwTpW-qGBpZefTljKvywi4MZ4PzEz0T17MtrSGCkrF7Bhp6IL9MAEMLhBCL3NXZ966iNxVEPjXXCGNGC1_dbofUkcxjrnv4T6pb-w-fudFeW07a02uMD920ND16UrJvJqh9T_743HDnWqGDd70fxOFGmUBM-pZHsvzSMc6UjTTvlnsftXo_TgUfmyshB-34--dK2qK0tS6Li88r1cNiupirGd7TtU5cR580o7KtFyIPQNwJU7hoq5Cl77K7csovMQ_3I09tGmDAtDpEEX-MmuhnL-BiMQBYGFQ8RP2LR8ToJmkHe1d945GOEZgAQy23t39ROXUq4nXyVBwQUmL1Zx2Q0IRkr6XZgAwNibcDdUQnoaNurEHJbFxFVJrPB-IWarSXuK5g0nUS_MMJ-LYiyMDyoLwPSdzicMsbFjmmLBkIWUQuAKum01Q2HvDn7tazbzrYT5puZZab4dz1nazB6ST4DzLp-7LpfseVBzEG95wi77XK4QrzZbJgntK18LlmiZMHVgucNcB-jFtAYdC9bkvvQG3j2dHprc2ZMnWipazC75uBeoi_Wxpc41tVwk4B45xlByoRggC2kau6_RfAg0jxHZ5iPH8WPMqlKrTs2qhyfLaycPrNtYyMSMGA4DFVK52zaZlNpoEVmfeqOC3Zeud6AGtCrAmF-8QQZ7Q3DUdC93Nzf2-TR5S6pdng6X6ZeQbqQ8rK5_26bgObmMJKhp42pxxz3_JVBRKkmGxjhPYzUE6GJcEgG6xcIexb1ZfbMQPwe6CLU-LfuNdibXiWO6MBjPvHADIVtwYYocft79kPkrskHOrs8FXgbelLsHpUBsdKKM0B3Ut7Xe5vg80Nc8DmgB0CrxBh8TtQo9XheqF9DgehrSOsbwf9JxVWoshuchTZDonb7CrirUKSB2ZkKPKpCe_z8DSvPprvn40VtwfGSZdrJuM1hhjM2IarPicINjIEJZpX9prEUEFtnj7jrNqM6UZvA1-TjQt2TMkEfPdr0vaLDjpziHDnKTWFAmpKgqNv6E8LaHquigs1yLXW30ZQXbstrcipsf_1_xPGQwRNsxdgl_GbFbCDMAuCxQqmy_T7KDrUHIky5yopRpllwQK3RJKjnAkAEtMKkW3nrWikDeBQODPm4B8XAxzWR1E4xWb3QiYjx_5h4k-dfv7TP2qHf_IEZQoO1K8wZ8U5OUYuJZJsahbj8LJrnHbA_WeGGmNx-YElLKciqqjPWznv3aPcP_Q04e_bhQyihm8pozo7JQMS2uJ-C2XIiON-J6KYJaTEBifsBCaP2FV8R7uP7z_BKZ7I6IFaUi3abYTyynKeDEcQlAsxm2fRxpQAYCYBDuXmyBVNML6JmlnAKvz90ojCbYpzCwNtJVH3QTxj2DOgXGYCyngd5dK5lWvNSvpmRQv1s1JjSGc8_s6oQsa_oQMbpCqT-Ja9lbqkJIfUgbrxpRbr9k9Zv7FpmRXGoHDm6RYABpuRagv-Og=w2940-h1664?auditContext=prefetch" width=80%; style="margin-top:8px;">
   </nav>
 </div>
   <main>
@@ -92,17 +93,31 @@
 </div> 
   </main> 
   
-   <footer class="footer">
-         ©<span id="copyright-year"></span> BAD B!TCH DUBZ |
-        <a href="#">Terms & Conditions</a>
+   <footer class="footer" style=" font-family: CoolveticaRG; font-size:19px;">
+         ©<span id="copyright-year"> 2025</span> BAD B!TCH DUBZ
+        
+        <a class="linefoot">|</a>
+          <a href="#">Terms & Conditions</a>
     </footer>
 
-  <script>
-    function toggleNav() {
-      const nav = document.getElementById('main-nav');
-      nav.classList.toggle('active');
+ <script>
+  function toggleNav(button) {
+    const nav = document.getElementById('main-nav');
+    const icon = button.querySelector('i');
+
+    nav.classList.toggle('active');
+
+    if (icon.classList.contains('fa-bars')) {
+      // Change to X
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa', 'fa-times'); // Using fa-times for the "X"
+    } else {
+      // Change back to Bars
+      icon.classList.remove('fa', 'fa-times');
+      icon.classList.add('fa','fa-bars');
     }
-  </script> 
+  }
+</script>
 
 </body>
 </html>
@@ -409,6 +424,7 @@ main {
     display: block; /* Show the menu button */
     
     margin-right:6px;
+    width:30px;
   }
 
   .contact-info {
@@ -465,7 +481,7 @@ nav ul {
 
 nav ul li {
   margin: 0;
-}
+} 
 
 nav ul li a {
   display: block;
@@ -474,19 +490,29 @@ nav ul li a {
   color: white;
 }
 
+  nav li :hover {
+            text-decoration: underline;
+        }
+
+
 /* Mobile Navigation Styles (Initially Hidden) */
 nav#main-nav {
   position: fixed;
   top: 0;
-  left: -80%;  /* Initially hidden off-screen */
-  width: 80%;
+  left: -70%;  /* Initially hidden off-screen */
+  width: 70%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  
+ 
+  background-color: rgba(0, 0, 0, 1); /* Dark background */
   color: white;
   z-index: 1000; /* Ensure it's on top of other content */
   overflow-y: auto; /* Allow scrolling if content is too long */
   transition: left 0.3s ease-in-out; /* Animate the slide-in */
 }
+
+
+  
 
 nav#main-nav.active {
   left: 0; /* Slide the navigation into view */
@@ -496,14 +522,17 @@ nav#main-nav ul {
   flex-direction: column; /* Stack items vertically */
   align-items: flex-start; /* Align text to the left */
   padding-top: 60px; /* Add space for the header above */
+ 
 }
 
 nav#main-nav ul li a {
-  padding: 15px;
+  
+  
   font-size: 1.2em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separator lines */
-  width: 100%;
+ 
   box-sizing: border-box; /* Include padding in width */
+  
 }
 
 /* Media Queries */
@@ -511,6 +540,7 @@ nav#main-nav ul li a {
 /* Small Screens (e.g., phones) */
 @media (min-width: 481px) { /* changed max-width to min-width */
   nav#main-nav {
+    
     display: block !important; /* Force show the nav */
     position: static; /* Reset position to static */
     width: auto; /* Reset width to auto */
@@ -606,8 +636,39 @@ display: none !important;
          margin-bottom:2px;
   
    
+   
+   
      }}
    
+   
+   
+   @media (max-width: 480px) { /* changed max-width to min-width */
+  nav#main-nav {
+  
+  
+ boder-top: none !important;
+ border-right: solid 2px white !important;
+  }
+  
+  nav#main-nav ul li a {
+  
+ 
+  font-size: 1.6em;
+  
+  
+}
+nav#main-nav ul {
+
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align text to the left */
+  padding-top: 30px; /* Add space for the header above */
+  padding-left: 30px !important;
+ 
+}
+  
+  
+  
+  }
     @media (min-width: 332px) {
    .titlentrer {
    font-size: 28px !important;
@@ -794,3 +855,20 @@ display: none !important;
      }
      
      }
+     
+     .linefoot {
+ padding-left: 8px;
+  
+   
+     }
+     
+     @media (max-width: 600px) {
+     
+     .linefoot {
+ display: none !important;
+  
+   
+     }
+     
+     }
+     
