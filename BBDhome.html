@@ -3,12 +3,12 @@
 <head>
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header and Navigation</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<div style="position:fixed; width:100%; top:0;">
+<div style="position:fixed; width:100%; top:0; z-index:10">
   <header>
     <!-- Header code from previous response here -->
     <div class="header-container">
@@ -54,9 +54,9 @@
   <main>
     <!-- Your main content here -->
     <h1 class="titlentrer" style="text-align:center; color:white;">BAD B!TCH DUBZ</h1>
-    <div class="vid-container">
+    <div class="vid-container" style="z-index:-1 !important;">
  <div class="intro-video">
-<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ydtijp90yk.js" async type="module"></script><style>wistia-player[media-id='ydtijp90yk']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ydtijp90yk/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="ydtijp90yk" aspect="1.7777777777777777"></wistia-player> 
+ <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ydtijp90yk.js" async type="module"></script><style>wistia-player[media-id='ydtijp90yk']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ydtijp90yk/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="ydtijp90yk" aspect="1.7777777777777777"></wistia-player>
  </div>
   </div>
   <div class="main-container-container">
@@ -125,7 +125,7 @@
 
 @font-face {
       font-family: 'MicrogrammaDExtendedBold';
-      src: url('https://cors-anywhere.herokuapp.com/https://github.com/Stepzach/BBD/blob/main/Microgramma%20D%20Extended%20Bold.woff?raw=true');
+      src: url('MicrogrammaDExtendedBold.woff') format('woff');
       font-weight: bold;
       font-style:normal;
      
@@ -134,7 +134,7 @@
     /* Coolvetica RG */
     @font-face {
       font-family: 'CoolveticaRG';
-      src: url('https://cors-anywhere.herokuapp.com/https://github.com/Stepzach/BBD/blob/main/coolvetica%20rg.woff?raw=true') ;
+      src: url('CoolveticaRG.woff') format('woff');
       font-weight: normal;
       font-style: normal;
      
@@ -499,7 +499,7 @@ nav ul li a {
 nav#main-nav {
   position: fixed;
   top: 0;
-  left: -70%;  /* Initially hidden off-screen */
+  left: -72%;  /* Initially hidden off-screen */
   width: 70%;
   height: 100%;
   
@@ -662,7 +662,7 @@ nav#main-nav ul {
   flex-direction: column; /* Stack items vertically */
   align-items: flex-start; /* Align text to the left */
   padding-top: 30px; /* Add space for the header above */
-  padding-left: 30px !important;
+  padding-left: 34px !important;
  
 }
   
