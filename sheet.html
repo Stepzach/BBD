@@ -878,13 +878,18 @@ nav#main-nav ul {
     
     
     <script>
-  window.onload = function() {
-    Tabletop.init({
-      key: '1xfndqOtjdBmNv6tUSpz0EX5uuYwVH96vtH6L90eqtIw',  // Your Sheet ID
-      callback: showData,
-      simpleSheet: true
-    })
-  }
+    
+    
+    function init() {
+          Papa.parse('https://docs.google.com/spreadsheets/d/1xfndqOtjdBmNv6tUSpz0EX5uuYwVH96vtH6L90eqtIw', {
+          download: true,
+          header: true,
+          complete: function(results) {
+            var data = results.data
+            console.log(data)
+          }
+        })
+
 
   function showData(data) {
     const container = document.getElementById('contentSHEET');
@@ -917,6 +922,8 @@ nav#main-nav ul {
       container.appendChild(block);
     });
   }
+  window.addEventListener('DOMContentLoaded', init)
+
 </script>
      
      
