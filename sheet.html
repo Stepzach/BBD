@@ -20,7 +20,7 @@
 <meta property="og:type" content=website>
 <meta property="og:image" content="https://stepzach.github.io/BBD/IMG_0955.png">
 
-<script src="https://unpkg.com/tabletop@1.5.1/tabletop.js" defer></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
 </head>
 <body>
@@ -877,21 +877,25 @@ nav#main-nav ul {
     </style>
     
     
-    <script>
-    
-    
-    function init() {
-          Papa.parse('https://docs.google.com/spreadsheets/d/1xfndqOtjdBmNv6tUSpz0EX5uuYwVH96vtH6L90eqtIw', {
+    <script type="text/javascript">
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRVYlECTvMEqkoyJPAFuqHIRSM6zFjoKrXVrRaFv2KpnDccI7FvytRaS6J47gxUsK11yi8NJ2k-seDF/pub?output=csv';
+
+      function init() {
+        Papa.parse(public_spreadsheet_url, {
           download: true,
           header: true,
-          complete: function(results) {
-            var data = results.data
-            console.log(data)
-          }
+          complete: showInfo
         })
-
-
-  function showData(data) {
+      }
+      
+        window.addEventListener('DOMContentLoaded', init)
+        
+        
+          function showInfo(results) {
+        var data = results.data
+        
+        
+ 
     const container = document.getElementById('contentSHEET');
     container.innerHTML = ''; // Clear existing content
 
@@ -901,7 +905,7 @@ nav#main-nav ul {
       block.innerHTML = `
         <div class="main-container-789">
           <div class="image-wrapper-456">
-            <img src="${item['Image URL']}" alt="${item.Title}" style="max-width:100%;">
+            <img src="${item.ImageURL}" alt="${item.Title}" style="max-width:100%;">
           </div>
           <div class="text-area-123">
             <div>
