@@ -1021,8 +1021,10 @@ nav#main-nav ul {
       cursor:pointer;
     }
 
+  @media (min-width: 650px) {
     .image-wrapper:hover .overlay {
       opacity: 1;
+    }
     }
 
     .overlay h2, .overlay p {
@@ -1080,9 +1082,9 @@ function createImageHTML(item) {
     <div class="image-wrapper" onclick="window.open('${item.Link}', '_blank')">
       <img src="${item.ImageURL}" alt="${item.Title}">
       <div class="overlay">
-        <h2>${item.Title}</h2>
-        <p>${item.Date}</p>
-        <p style=" cursor:pointer;    font-family: 'CoolveticaRG';" >${item.Description}</p>
+        <h1>${item.Title}</h1>
+        <p style="font-size:20px; ">${item.Date}</p>
+        <p style=" font-size:22px;    font-family: 'CoolveticaRG';" >${item.Description}</p>
       </div>
     </div>
   `;
