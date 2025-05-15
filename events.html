@@ -1018,6 +1018,7 @@ nav#main-nav ul {
       transition: opacity 0.3s ease;
      
       text-align: center;
+      cursor:pointer;
     }
 
     .image-wrapper:hover .overlay {
@@ -1081,7 +1082,7 @@ function createImageHTML(item) {
       <div class="overlay">
         <h2>${item.Title}</h2>
         <p>${item.Date}</p>
-        <p>${item.Description}</p>
+        <p style=" cursor:pointer;    font-family: 'CoolveticaRG';" >${item.Description}</p>
       </div>
     </div>
   `;
