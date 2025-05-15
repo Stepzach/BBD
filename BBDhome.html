@@ -85,9 +85,9 @@
   </div>
   <div class="text-area-123">
     <div><h1 class="h1rea" style="line-height:1em; margin-bottom:0px; margin-top:0px;">REA - <br>DUBPLATE</h1>
-    <p class="pREA" style="font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >£25</p></div>
+    <p class="pREA" id="descrea1" style="font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >£25</p></div>
     <div>
-     <p class="pREA" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >Limited edition dubplate vinyl featuring exclusive basslines
+     <p class="pREA" id="descrea" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >Limited edition dubplate vinyl featuring exclusive basslines
 
 
 </p></div>
@@ -978,10 +978,10 @@ nav#main-nav ul {
       <div class="text-area-RIGHT" style="justify-items: right;">
         <div>
           <h1 class="h1rea" style="line-height:1em; margin-bottom:0px; margin-top:0px;">${item.Title}</h1>
-          <p class="pREA" style="font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;">${item.Date}</p>
+          <p class="pREA" id="descrea1" style="font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;">${item.Date}</p>
         </div>
         <div>
-          <p class="pREA" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px; max-width:400px;">${item.Description.replace(/\n/g, '<br>')}</p>
+          <p class="pREA" id="descrea" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px; max-width:400px;">${item.Description.replace(/\n/g, '<br>')}</p>
         </div>
         <div>
           <p class="pREA" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;">
@@ -1008,5 +1008,28 @@ nav#main-nav ul {
      text-decoration: underline !important;
      
      }
+       @media (max-width: 580px) {
+     #descrea {
+    margin-bottom:2px;
+     
+     }
+      }
+      
+       @media (max-width: 430px) {
+     #descrea1 {
+    margin-bottom:5px;
+     
+     }
+      }
+      
+      
+       @media (min-width: 775px) {
+     #descrea {
+    text-transform: uppercase;
+     
+     }
+      }
+      
+     
     </style>
      
