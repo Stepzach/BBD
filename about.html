@@ -333,7 +333,7 @@ width:600px;
         }
 
         /* Media query for responsiveness - Adjust breakpoint as needed */
-        @media (max-width: 600px) {
+          @media (max-width: 600px) {
             .footer {
                 padding: 10px; /* Less padding on smaller screens */
                 font-size: 0.7em; /* Even smaller font size */
@@ -342,6 +342,20 @@ width:600px;
             .footer a {
                 display: block; /* Stack links on top of each other */
                 margin: 5px 0; /* Add vertical spacing */
+            }
+        }
+        
+          @media (max-width: 480px) {
+            .footer {
+                padding: 5px; /* Less padding on smaller screens */
+                font-size: 1.1em !important;  /* Even smaller font size */
+            }
+
+            .footer a {
+                display: block; /* Stack links on top of each other */
+                margin: 1px 0; /* Add vertical spacing */
+                font-size: 0.9em !important; 
+                opacity: 86%;
             }
         }
     
