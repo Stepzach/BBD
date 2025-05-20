@@ -29,9 +29,9 @@
     <!-- Header code from previous response here -->
     <div class="header-container">
         <div class="header-left">
-          <a href="https://www.instagram.com/badbitchdubz/" target="_blank" class="social-logo"><i class="fab fa-instagram"></i></a>
-            <a href="https://badbitchdubz.bandcamp.com/album/bbd001" target="_blank" class="social-logo medium-up"><i class="fab fa-bandcamp"></i></a>
-            <a href="https://soundcloud.com/badbitchdubz" target="_blank" class="social-logo large-up"><i class="fab fa-soundcloud"></i></a>
+          <a id="instalogo" href="https://www.instagram.com/badbitchdubz/" target="_blank" class="social-logo"><i class="fab fa-instagram"></i></a>
+            <a id="bandlogo" href="https://badbitchdubz.bandcamp.com/album/bbd001" target="_blank" class="social-logo medium-up"><i class="fab fa-bandcamp"></i></a>
+            <a id="soundlogo" href="https://soundcloud.com/badbitchdubz" target="_blank" class="social-logo large-up"><i class="fab fa-soundcloud"></i></a>
         </div>
 
         <div class="header-center">
@@ -45,7 +45,7 @@
             </div>
            <button class="menu-button small-only" onclick="toggleNav(this)">
   <i class="fa fa-bars"></i>
-</button>
+</button> 
         </div>
     </div>
   </header>
@@ -60,16 +60,13 @@
        <li class="lineline" style="
     width: auto;
 "><a>│</a></li>
-      <li><a href="/BBD/events">EVENTS</a></li>
-       <li class="lineline" style="
-    width: auto;
-"><a>│</a></li>
+     
       <li><a href="/BBD/residents">RESIDENTS</a></li>
        <li class="lineline" style="
     width: auto;
 "><a>│</a></li>
       <li><a href="/BBD/about">ABOUT</a></li>
-       <li class="lineline" style="
+       <li class="lineline" style=" 
     width: auto;
 "><a>│</a></li>
       <li><a href="/BBD/contact">CONTACT</a></li>
@@ -95,14 +92,14 @@
   </div>
   <div class="text-area-123">
     <div><h1 class="h1rea" style="line-height:1em; margin-bottom:0px; margin-top:0px;">REA - <br>DUBPLATE</h1>
-    <p class="pREA" id="descrea1" style="font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >£25</p></div>
+    <p class="pREA" id="descrea1" style="font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >£20</p></div>
     <div>
      <p class="pREA" id="descrea" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >Limited edition dubplate vinyl featuring exclusive basslines
 
 
 </p>
 
-<p class="pREA" id="descrea1" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >TRACKLIST: 1.MiNNiM - EXAMPLE 2.AVA - EXAMPLE 3.DESELECTA - EXAMPLE ...AND MORE
+<p class="pREA" id="descrea1" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" >A GRIMEY, 4X4 BASS DRIVEN 2 TRACKER FROM REA
 
 
 </p>
@@ -270,6 +267,12 @@
                 font-size: 0.9em !important; 
                 opacity: 86%;
             }
+            #soundlogo,
+            #bandlogo {
+                display: none !important; /* Stack links on top of each other */
+                
+            }
+            
         }
     
 /* General Styles (applied to all screen sizes) */
@@ -587,7 +590,7 @@ nav ul li {
        @media (min-width: 481px) {
      nav ul li {
 
-         width: 200px;
+         width: auto !important;
     text-align: center;
 } 
           } 
