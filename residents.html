@@ -1078,8 +1078,8 @@ nav#main-nav ul {
   }
 
 .columnBBDResidents img {
-  width: 100%; /* Ensure images fit within their containers */
-  height: 180px; /* Maintain aspect ratio */
+  width: 90%; /* Ensure images fit within their containers */
+  aspect-ratio: 1.2 / 1;  
   display: block; /* Remove default inline spacing */
   margin: 0 auto; /* Center images horizontally */
   object-fit: cover;
@@ -1098,14 +1098,9 @@ nav#main-nav ul {
 @media (min-width: 710px) {
   .columnBBDResidents img {
  
-  height: 200px; /* Maintain aspect ratio */
- 
-} 
-} 
-@media (min-width: 860px) {
-  .columnBBDResidents img {
- 
-  height: 230px; /* Maintain aspect ratio */
+  width: 100%; /* Ensure images fit within their containers */
+  aspect-ratio: 1 / 1;  
+  max-width:400px;
  
 } 
 } 
