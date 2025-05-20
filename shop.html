@@ -27,8 +27,8 @@
     <div class="header-container">
         <div class="header-left">
             <a href="https://www.instagram.com/badbitchdubz/" target="_blank" class="social-logo"><i class="fab fa-instagram"></i></a>
-            <a href="https://badbitchdubz.bandcamp.com/album/bbd001" target="_blank" class="social-logo medium-up"><i class="fab fa-bandcamp"></i></a>
-            <a href="https://soundcloud.com/badbitchdubz" target="_blank" class="social-logo large-up"><i class="fab fa-soundcloud"></i></a>
+            <a id="bandlogo" href="https://badbitchdubz.bandcamp.com/album/bbd001" target="_blank" class="social-logo medium-up"><i class="fab fa-bandcamp"></i></a>
+            <a id="soundlogo" href="https://soundcloud.com/badbitchdubz" target="_blank" class="social-logo large-up"><i class="fab fa-soundcloud"></i></a>
         </div>
 
         <div class="header-center">
@@ -57,10 +57,7 @@
        <li class="lineline" style="
     width: auto;
 "><a>│</a></li>
-      <li><a href="/BBD/events">EVENTS</a></li>
-       <li class="lineline" style="
-    width: auto;
-"><a>│</a></li>
+     
       <li><a href="/BBD/residents">RESIDENTS</a></li>
        <li class="lineline" style="
     width: auto;
@@ -81,7 +78,13 @@
     <h1 class="titlentrer1" style=" color:white; display: inline-block;">SHOP</h1>
 </div>
     <!-- Your main content here -->
-    <div class="shopbig" style="width:auto; text-align: center; margin-bottom:10px;">
+    <div class="shopbigbig" style="display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; padding:20px; align-items: flex-start;">
+    
+    
+    <div class="shopbig" style="min-width: 300px !important ; flex: 1;
+    max-width: 600px !important ; width:auto; text-align: center; margin-bottom:10px;">
     <h1 class="titlentrer2" style="text-decoration: none !important; color:white; display: inline-block; padding: 2px 15px !important;">REA - BBB001</h1>
 
 
@@ -114,7 +117,8 @@
 
 
     
-   <div class="shopbig" style="width:auto; text-align: center; margin-bottom:10px; margin-top:20px;">
+   <div class="shopbig" style="flex: 1;
+    max-width: 600px !important ; min-width: 300px !important ;  width:auto; text-align: center; margin-bottom:10px; margin-top:20px;">
     <h1 class="titlentrer2" style="text-decoration: none !important; color:white; display: inline-block; padding: 2px 15px !important;">BBD001</h1>
     
     
@@ -147,7 +151,7 @@
   
     <h1 class="titlentrer2" onclick="window.open('Example.com', '_blank')" style="cursor:pointer; font-size:20px; color:white; display: inline-block; padding: 2px 15px !important; font-size:20px !important;">BANDCAMP <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="26px" style="filter: invert(100%); position: relative; bottom:-6px; left: -4px;"></h1>
 </div>
- 
+ </div>
   </main> 
   
    <footer class="footer" style=" font-family: CoolveticaRG; font-size:19px;">
@@ -239,6 +243,20 @@
 </script>
 
 <style>
+@media (max-width: 430px) {
+.shopbig  {
+min-width: 200px !important;
+ }
+.shopbigbig  {
+padding: 8px !important;
+ }
+  }
+  
+  @media (min-width: 668px) {
+.shopbig  {
+margin-top: 0 !important;
+ }
+ }
 @media (min-width: 481px) {
 @keyframes spinTwoSmoothEaseIns {
   0% {
@@ -403,6 +421,11 @@
   .shopbig {
      padding-bottom:18px;
   }
+        #soundlogo,
+            #bandlogo {
+                display: none !important;
+                
+            }
    }
   
 #overlayblack {
@@ -832,8 +855,7 @@ nav ul li {
        @media (min-width: 481px) {
      nav ul li {
 
-         width: 200px;
-    text-align: center;
+       
 } 
           } 
 
@@ -1055,7 +1077,7 @@ nav#main-nav ul {
 
  @media (min-width: 0px) {
    .titlentrer1 {
-   font-size: 40px !important;
+   font-size: 30px !important;
    padding:0 !important;
     margin:0 ;
         margin-top:6px;
@@ -1067,7 +1089,7 @@ nav#main-nav ul {
 
       @media (min-width: 332px) {
    .titlentrer1 {
-   font-size: 48px !important;
+   font-size: 40px !important;
    padding:0 !important;
     margin:0 ;
         margin-top:6px;
@@ -1078,7 +1100,7 @@ nav#main-nav ul {
    
     @media (min-width: 430px) {
   .titlentrer1 {
-   font-size: 58px !important;
+   font-size: 50px !important;
    padding:0 !important;
     margin:0 ;
       margin-top:6px;
@@ -1089,7 +1111,7 @@ nav#main-nav ul {
    
     @media (min-width: 603px) {
    .titlentrer1  {
-   font-size: 78px !important;
+   font-size: 70px !important;
    padding:0 !important;
     margin:0 ;
        margin-top:6px;
@@ -1102,7 +1124,7 @@ nav#main-nav ul {
    
    @media (min-width: 731px) {
    .titlentrer1  {
-   font-size: 98px !important;
+   font-size: 90px !important;
    padding:0 !important;
     margin:0 ;
        margin-top:6px;
