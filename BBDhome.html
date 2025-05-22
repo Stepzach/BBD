@@ -313,7 +313,7 @@ border: solid 2px white;
 }
 
 .text-area-123 {
-  width: 52%; /* Text container takes the remaining 60% */
+  width: 80%; 
   box-sizing: border-box;
 }
 
@@ -340,7 +340,7 @@ border: solid 2px white;
 
 .image-wrapper-RIGHT img {
   width: 100%; /* Image fills the container */
-  max-height: 400px; /* Maintain aspect ratio */
+  max-height: 280px; /* Maintain aspect ratio */
   object-fit:cover;
   object-position:top;
   display: block; /* Remove extra space below the image */
@@ -475,7 +475,11 @@ main {
     margin-right:10px;
     }
 }
-
+     @media (min-width: 480px) {
+.vid-container {
+margin-bottom: 20px;
+       }
+}
 /* Small Screens (e.g., phones) */
 @media (max-width: 480px) {
 
@@ -960,7 +964,8 @@ nav#main-nav ul {
      @media (min-width: 481px) {
      
       .titlentrer {
- margin-top: 158px;
+ margin-top: 168px;
+            margin-bottom: 12px;
   
    
      }
