@@ -27,7 +27,12 @@
     <!-- Header code from previous response here -->
     <div class="header-container">
         <div class="header-left" style="width: 210px;">
-            <a href="https://www.instagram.com/badbitchdubz/" target="_blank" class="social-logo"><i class="fab fa-instagram"></i></a>
+              <paypal-cart-button data-id="pp-view-cart" style="
+    border: none !important;" class="paybtncontsmall"></paypal-cart-button>
+<script>
+  cartPaypal.Cart({ id: "pp-view-cart" })
+</script>
+            <a id="bandlogo" href="https://www.instagram.com/badbitchdubz/" target="_blank" class="social-logo"><i class="fab fa-instagram"></i></a>
             <a id="bandlogo" href="https://badbitchdubz.bandcamp.com/album/bbd001" target="_blank" class="social-logo medium-up"><i class="fab fa-bandcamp"></i></a>
             <a id="soundlogo" href="https://soundcloud.com/badbitchdubz" target="_blank" class="social-logo large-up"><i class="fab fa-soundcloud"></i></a>
         </div>
@@ -68,8 +73,12 @@
     width: auto;
 "><a>│</a></li>
       <li><a href="/BBD/contact">CONTACT</a></li>
-        <li><a>
-      <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+          <li class="lineline"  style="
+    width: auto;
+"><a>│</a></li>
+        <li id="hidelinesl"><a style="padding: 0" >
+      <paypal-cart-button data-id="pp-view-cart" style="
+    border: none !important;" class="paybtncontlarge"></paypal-cart-button>
 <script>
   cartPaypal.Cart({ id: "pp-view-cart" })
 </script>
@@ -79,6 +88,45 @@
   </nav>
 </div>
      <div id="overlayblack"></div>
+
+     <style>
+          #cart-btn {
+ border: none !important;
+padding: 0 !important;
+               }
+          
+
+          @media (max-width: 480px) {
+    .paybtncontlarge {
+        display: none !important;
+    }
+     #hidelinesl {
+        display: none !important;
+    }
+               #cart-btn_icon {
+   
+    width: 30px;
+    height: 30px;
+}
+                
+
+               
+}
+
+          #cart-btn:hover {
+   
+   background-color: black !important;
+                     color: white !important;
+                      filter: none !important;
+}
+               
+          
+           @media (min-width: 481px) {
+    .paybtncontsmall {
+        display: none !important
+    }
+}
+     </style>
   <main> 
   
   <div style="width:auto; text-align: center; margin-bottom:0px;">
@@ -733,19 +781,13 @@ border: solid 2px white;
   box-sizing: border-box;
 } 
 #cart-btn_icon {
-  filter: invert(1) !important;
+  filter: invert(1);
 } 
-#cart-btn:hover {
-#cart-btn_icon {
-  filter: none !important;
-} 
-} 
+
 #btn-text_added svg {
   filter: invert(1) !important;
 } 
-#btn-text_added svg:hover {
-  filter: none !important;
-} 
+
 .addToCartButtonContainer {
   color: white !important;
 } 
