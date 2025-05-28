@@ -155,7 +155,7 @@ REA - BBB001</h1>
  
  
    
- <h1 class="titlentrer2" id="containerEVENTSh1" style="border: solid 2px white; cursor:pointer; border-radius:15px; font-size:20px; color:white; display: inline-block; padding-left: 9px !important; padding-bottom: 6px !important;  font-size:20px;     margin-top: 1px;     width: 199px;" onclick="window.open('https://www.paypal.com/ncp/payment/A2GT28DBC2566', '_blank')" >BUY -  £17.50 <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="26px" style="filter: invert(100%); position: relative; bottom:-6px; left: -4px;"></h1>
+ <h1 class="titlentrer2" id="containerEVENTSh1" style="border: solid 2px white; cursor:pointer; border-radius:15px; font-size:20px; color:white; display: inline-block; padding-left: 9px !important; padding-bottom: 6px !important;  font-size:20px;     margin-top: 1px;     width: 199px;" onclick="showOverlaySHOPDELIV()" >BUY -  £17.50 <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="26px" style="filter: invert(100%); position: relative; bottom:-6px; left: -4px;"></h1>
  
 
 
@@ -220,6 +220,15 @@ REA - BBB001</h1>
 </div>
         
  </div>
+ 
+ <div id="overlaySHOPDELIV">
+  <div class="overlay-contentSHOPDELIV">
+    <span class="close-btnSHOPDELIV" onclick="closeOverlaySHOPDELIV()">&times;</span>
+    <button onclick="window.open('https://www.paypal.com/ncp/payment/A2GT28DBC2566', '_blank')" >SHIP TO DOOR (£5) </button>
+    <button  onclick="window.open('https://www.paypal.com/ncp/payment/UKW7ZHJFPD972', '_blank')">COLLECTION (Central Bistol)</button>
+  </div>
+</div>
+
   </main> 
   
    <footer class="footer" style=" font-family: CoolveticaRG; font-size:19px;">
@@ -1587,3 +1596,54 @@ nav#main-nav ul {
         
  } 
         }
+        
+         #overlaySHOPDELIV {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay-contentSHOPDELIV {
+      background: black;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      width: 300px;
+    }
+
+    .close-btnSHOPDELIV {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      color:white;
+    }
+
+    .overlay-contentSHOPDELIV button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    </style>
+    <script>
+  function showOverlaySHOPDELIV() {
+    document.getElementById('overlaySHOPDELIV').style.display = 'flex';
+  }
+
+  function closeOverlaySHOPDELIV() {
+    document.getElementById('overlaySHOPDELIV').style.display = 'none';
+  }
+</script>
+    
