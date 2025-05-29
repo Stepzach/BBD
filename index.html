@@ -111,7 +111,7 @@
 </p>
 </div>
      <div>
-     <p class="pREA" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" > <a class="preaun" onclick="showOverlaySHOPDELIV()"  target="_blank" style="color: inherit; text-decoration: none;">SHOP NOW <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="26px" style="filter: invert(100%); position: relative; bottom:-6px; left: -4px;"></a></p></div>
+     <p class="pREA" style="line-height:1em; font-family: 'CoolveticaRG'; font-size: 25px; letter-spacing:1px; margin-top:0px;" > <a class="preaun" onclick="showOverlaySHOPDELIV()"  target="_blank" style="color: inherit; text-decoration: none; cursor:pointer">SHOP NOW <img src="https://stepzach.github.io/thegryph/arrow-up-right-icon-lg.png" width="26px" style="filter: invert(100%); position: relative; bottom:-6px; left: -4px;"></a></p></div>
     
   </div>
 </div>
@@ -119,7 +119,8 @@
 
  <div id="overlaySHOPDELIV">
   <div class="overlay-contentSHOPDELIV">
-    <span class="close-btnSHOPDELIV" onclick="closeOverlaySHOPDELIV()">&times;</span>
+  <h3 style="color:white;">Please choose an option:</h3>
+    <span class="close-btnSHOPDELIV" onclick="closeOverlaySHOPDELIV()">x</span>
     <button onclick="window.open('https://www.paypal.com/ncp/payment/A2GT28DBC2566', '_blank')" >SHIP TO DOOR (£5) </button>
     <button  onclick="window.open('https://www.paypal.com/ncp/payment/UKW7ZHJFPD972', '_blank')">COLLECTION (Central Bristol)</button>
   </div>
@@ -1124,7 +1125,7 @@ nav#main-nav ul {
       top: 10px;
       right: 15px;
       cursor: pointer;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       color:white;
     }
@@ -1132,9 +1133,13 @@ nav#main-nav ul {
     .overlay-contentSHOPDELIV button {
       margin: 10px;
       padding: 10px 20px;
-      font-size: 16px;
+      font-size: 18px;
       cursor: pointer;
       border-radius: 10px;
+      border: solid 2px white;
+      background-color: black;
+      color: white;
+      font-family: 'CoolveticaRG';
     }
     </style>
     <script>
